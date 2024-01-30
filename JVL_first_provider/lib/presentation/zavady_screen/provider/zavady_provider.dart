@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:jlv_first/core/app_export.dart';
 import 'package:jlv_first/presentation/zavady_screen/models/zavady_model.dart';
-import '../models/viewhierarchy_item_model.dart';
-import '../models/twentysix_item_model.dart';
+import '../models/viewhierarchylist_item_model.dart';
+import '../models/twentysixlist_item_model.dart';
 
 /// A provider class for the ZavadyScreen.
 ///

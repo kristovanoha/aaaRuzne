@@ -138,7 +138,8 @@ class ColorSchemes {
   static final primaryColorScheme = ColorScheme.light(
     // Primary colors
     primary: Color(0XFF02458D),
-    primaryContainer: Color(0XFF58E435),
+    primaryContainer: Color(0XFFD9D9D9),
+    secondaryContainer: Color(0XFFD71A1A),
 
     // On colors(text colors)
     onPrimary: Color(0XFFFFFFFF),
@@ -163,6 +164,9 @@ class PrimaryColors {
 
   // LightBlue
   Color get lightBlueA700 => Color(0XFF007AFF);
+
+  // LightGreen
+  Color get lightGreenA700 => Color(0XFF58E435);
 }
 
 PrimaryColors get appTheme => ThemeHelper().themeColor();

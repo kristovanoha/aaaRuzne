@@ -54,7 +54,7 @@ class DetailzavadyScreenState extends State<DetailzavadyScreen> {
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
                                       children: [
-                                        _buildRJDDThirtyFour(context),
+                                        _buildDetailZVady(context),
                                         SizedBox(height: 31.v),
                                         Padding(
                                             padding:
@@ -63,7 +63,7 @@ class DetailzavadyScreenState extends State<DetailzavadyScreen> {
                                                 style: theme
                                                     .textTheme.labelLarge)),
                                         SizedBox(height: 23.v),
-                                        _buildDetailzavady(context),
+                                        _buildOstatn(context),
                                         SizedBox(height: 53.v),
                                         Padding(
                                             padding:
@@ -137,7 +137,7 @@ class DetailzavadyScreenState extends State<DetailzavadyScreen> {
                                                 ]))
                                       ]))))
                     ])),
-            bottomNavigationBar: _buildEightyTwo(context)));
+            bottomNavigationBar: _buildOdeslat(context)));
   }
 
   /// Section Widget
@@ -167,7 +167,7 @@ class DetailzavadyScreenState extends State<DetailzavadyScreen> {
   }
 
   /// Section Widget
-  Widget _buildDetailZVady(BuildContext context) {
+  Widget _buildDetailHlEn(BuildContext context) {
     return Align(
         alignment: Alignment.bottomLeft,
         child: Padding(
@@ -307,7 +307,7 @@ class DetailzavadyScreenState extends State<DetailzavadyScreen> {
   }
 
   /// Section Widget
-  Widget _buildRJDDThirtyFour(BuildContext context) {
+  Widget _buildDetailZVady(BuildContext context) {
     return Container(
         height: 225.v,
         width: 366.h,
@@ -351,13 +351,13 @@ class DetailzavadyScreenState extends State<DetailzavadyScreen> {
                                           overflow: TextOverflow.ellipsis,
                                           style: theme.textTheme.bodySmall))
                                 ]))),
-                    _buildDetailZVady(context)
+                    _buildDetailHlEn(context)
                   ])))
         ]));
   }
 
   /// Section Widget
-  Widget _buildDetailzavady(BuildContext context) {
+  Widget _buildOstatn(BuildContext context) {
     return Align(
         alignment: Alignment.center,
         child: SizedBox(
@@ -418,7 +418,7 @@ class DetailzavadyScreenState extends State<DetailzavadyScreen> {
   }
 
   /// Section Widget
-  Widget _buildEightyTwo(BuildContext context) {
+  Widget _buildOdeslat(BuildContext context) {
     return Padding(
         padding: EdgeInsets.only(left: 50.h, right: 9.h, bottom: 20.v),
         child: Row(mainAxisAlignment: MainAxisAlignment.end, children: [

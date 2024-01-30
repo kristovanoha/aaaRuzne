@@ -92,7 +92,7 @@ class DruhyScreenState extends State<DruhyScreen> {
         child: Container(
             margin: EdgeInsets.only(right: 3.h),
             padding: EdgeInsets.symmetric(horizontal: 18.h, vertical: 3.v),
-            decoration: AppDecoration.outlinePrimaryContainer
+            decoration: AppDecoration.outlineLightGreenA
                 .copyWith(borderRadius: BorderRadiusStyle.roundedBorder10),
             child: Column(
                 mainAxisSize: MainAxisSize.min,
@@ -111,7 +111,7 @@ class DruhyScreenState extends State<DruhyScreen> {
                                 padding: EdgeInsets.only(bottom: 3.v),
                                 child: Text("lbl_veden".tr,
                                     style: CustomTextStyles
-                                        .bodySmallPrimaryContainer))
+                                        .bodySmallLightgreenA700))
                           ])),
                   SizedBox(height: 7.v),
                   Text("msg_bonusy_za_p_e_asy".tr,

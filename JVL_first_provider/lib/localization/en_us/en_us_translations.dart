@@ -8,6 +8,15 @@ final Map<String, String> enUs = {
       "Podpora:\nsupport@jlv.cz\n+420 777 111 222",
   "msg_zapomenut_heslo": "Zapomenuté heslo",
 
+  // test Screen
+  "lbl_hlavni_stranka": "Hlavni stranka", "lbl_login": "Login",
+
+  // splah Screen
+  "msg_uvodni_stranka_pred": "uvodni stranka pred nactenim aplikace",
+
+  // hlavni Screen
+  "lbl_test": "TEST ",
+
   // zavady Screen
   "lbl_archiv_z_vad": "archiv závad", "lbl_p_idat_z_vadu": "Přidat závadu",
   "lbl_technik_jan": "technik jan", "lbl_vy_e_eno": "vyřešeno",

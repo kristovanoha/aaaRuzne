@@ -39,7 +39,7 @@ class DetailzpravyScreenState extends State<DetailzpravyScreen> {
                 width: double.maxFinite,
                 padding: EdgeInsets.symmetric(horizontal: 8.h, vertical: 7.v),
                 child: Column(children: [
-                  _buildFortyFiveRow(context),
+                  _buildAdresatStack(context),
                   Align(
                       alignment: Alignment.centerLeft,
                       child: Padding(
@@ -65,7 +65,7 @@ class DetailzpravyScreenState extends State<DetailzpravyScreen> {
                               style: theme.textTheme.labelLarge))),
                   _buildOhnutaNohaEditText(context),
                   SizedBox(height: 25.v),
-                  _buildFortyOne(context),
+                  _buildOdeslatRow(context),
                   SizedBox(height: 5.v)
                 ]))));
   }
@@ -102,7 +102,7 @@ class DetailzpravyScreenState extends State<DetailzpravyScreen> {
   }
 
   /// Section Widget
-  Widget _buildFortyFiveRow(BuildContext context) {
+  Widget _buildAdresatStack(BuildContext context) {
     return Padding(
         padding: EdgeInsets.only(left: 8.h),
         child:
@@ -173,7 +173,7 @@ class DetailzpravyScreenState extends State<DetailzpravyScreen> {
   }
 
   /// Section Widget
-  Widget _buildFortyOne(BuildContext context) {
+  Widget _buildOdeslatRow(BuildContext context) {
     return Padding(
         padding: EdgeInsets.only(left: 3.h, right: 7.h),
         child:

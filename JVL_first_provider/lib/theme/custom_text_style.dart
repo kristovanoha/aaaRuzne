@@ -7,6 +7,11 @@ import '../core/app_export.dart';
 
 class CustomTextStyles {
   // Body text style
+  static get bodyLargeLexendExaSecondaryContainer =>
+      theme.textTheme.bodyLarge!.lexendExa.copyWith(
+        color: theme.colorScheme.secondaryContainer,
+        fontSize: 16.fSize,
+      );
   static get bodySmallAmber600 => theme.textTheme.bodySmall!.copyWith(
         color: appTheme.amber600,
       );
@@ -15,6 +20,9 @@ class CustomTextStyles {
       );
   static get bodySmallGray500 => theme.textTheme.bodySmall!.copyWith(
         color: appTheme.gray500,
+      );
+  static get bodySmallLightgreenA700 => theme.textTheme.bodySmall!.copyWith(
+        color: appTheme.lightGreenA700,
       );
   static get bodySmallOnPrimary => theme.textTheme.bodySmall!.copyWith(
         color: theme.colorScheme.onPrimary,

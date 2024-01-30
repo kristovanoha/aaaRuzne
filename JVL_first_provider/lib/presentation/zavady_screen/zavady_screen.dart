@@ -1,7 +1,7 @@
-import '../zavady_screen/widgets/twentysix_item_widget.dart';
-import '../zavady_screen/widgets/viewhierarchy_item_widget.dart';
-import 'models/twentysix_item_model.dart';
-import 'models/viewhierarchy_item_model.dart';
+import '../zavady_screen/widgets/twentysixlist_item_widget.dart';
+import '../zavady_screen/widgets/viewhierarchylist_item_widget.dart';
+import 'models/twentysixlist_item_model.dart';
+import 'models/viewhierarchylist_item_model.dart';
 import 'models/zavady_model.dart';
 import 'package:flutter/material.dart';
 import 'package:jlv_first/core/app_export.dart';
@@ -39,21 +39,21 @@ class ZavadyScreenState extends State<ZavadyScreen> {
                 width: double.maxFinite,
                 padding: EdgeInsets.symmetric(horizontal: 13.h, vertical: 15.v),
                 child: Column(children: [
-                  _buildSeventyNine(context),
+                  _buildZVadyRow(context),
                   SizedBox(height: 20.v),
                   Padding(
                       padding: EdgeInsets.only(left: 8.h),
                       child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            _buildViewHierarchy(context),
+                            _buildViewHierarchyList(context),
                             SizedBox(height: 30.v),
                             Padding(
                                 padding: EdgeInsets.only(left: 13.h),
                                 child: Text("lbl_archiv_z_vad".tr,
                                     style: theme.textTheme.labelLarge)),
                             SizedBox(height: 10.v),
-                            _buildTwentySix(context)
+                            _buildTwentySixList(context)
                           ])),
                   SizedBox(height: 5.v)
                 ]))));
@@ -85,7 +85,7 @@ class ZavadyScreenState extends State<ZavadyScreen> {
   }
 
   /// Section Widget
-  Widget _buildSeventyNine(BuildContext context) {
+  Widget _buildZVadyRow(BuildContext context) {
     return Padding(
         padding: EdgeInsets.only(left: 8.h, right: 1.h),
         child: Row(
@@ -140,7 +140,7 @@ class ZavadyScreenState extends State<ZavadyScreen> {
   }
 
   /// Section Widget
-  Widget _buildViewHierarchy(BuildContext context) {
+  Widget _buildViewHierarchyList(BuildContext context) {
     return Consumer<ZavadyProvider>(builder: (context, provider, child) {
       return ListView.separated(
           physics: NeverScrollableScrollPhysics(),
@@ -148,11 +148,11 @@ class ZavadyScreenState extends State<ZavadyScreen> {
           separatorBuilder: (context, index) {
             return SizedBox(height: 23.v);
           },
-          itemCount: provider.zavadyModelObj.viewhierarchyItemList.length,
+          itemCount: provider.zavadyModelObj.viewhierarchylistItemList.length,
           itemBuilder: (context, index) {
-            ViewhierarchyItemModel model =
-                provider.zavadyModelObj.viewhierarchyItemList[index];
-            return ViewhierarchyItemWidget(model, onTapViewHierarchy: () {
+            ViewhierarchylistItemModel model =
+                provider.zavadyModelObj.viewhierarchylistItemList[index];
+            return ViewhierarchylistItemWidget(model, onTapViewHierarchy: () {
               onTapViewHierarchy(context);
             });
           });
@@ -160,7 +160,7 @@ class ZavadyScreenState extends State<ZavadyScreen> {
   }
 
   /// Section Widget
-  Widget _buildTwentySix(BuildContext context) {
+  Widget _buildTwentySixList(BuildContext context) {
     return Consumer<ZavadyProvider>(builder: (context, provider, child) {
       return ListView.separated(
           physics: NeverScrollableScrollPhysics(),
@@ -168,11 +168,11 @@ class ZavadyScreenState extends State<ZavadyScreen> {
           separatorBuilder: (context, index) {
             return SizedBox(height: 24.v);
           },
-          itemCount: provider.zavadyModelObj.twentysixItemList.length,
+          itemCount: provider.zavadyModelObj.twentysixlistItemList.length,
           itemBuilder: (context, index) {
-            TwentysixItemModel model =
-                provider.zavadyModelObj.twentysixItemList[index];
-            return TwentysixItemWidget(model, onTapTwentySix: () {
+            TwentysixlistItemModel model =
+                provider.zavadyModelObj.twentysixlistItemList[index];
+            return TwentysixlistItemWidget(model, onTapTwentySix: () {
               onTapTwentySix(context);
             });
           });

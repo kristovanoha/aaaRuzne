@@ -308,14 +308,14 @@ class DetailzpravytwoScreenState extends State<DetailzpravytwoScreen> {
   /// Navigates to the hlavniScreen when the action is triggered.
   onTapCancelStack(BuildContext context) {
     NavigatorService.pushNamed(
-      AppRoutes.loginScreen,
+      AppRoutes.hlavniScreen,
     );
   }
 
   /// Navigates to the hlavniScreen when the action is triggered.
   onTapCancelStack1(BuildContext context) {
     NavigatorService.pushNamed(
-      AppRoutes.loginScreen,
+      AppRoutes.hlavniScreen,
     );
   }
 }

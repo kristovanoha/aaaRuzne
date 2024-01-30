@@ -1,8 +1,8 @@
-import '../seznamzprav_screen/widgets/messagelist_item_widget.dart';
-import '../seznamzprav_screen/widgets/viewhierarchy1_item_widget.dart';
-import 'models/messagelist_item_model.dart';
+import '../seznamzprav_screen/widgets/messageform_item_widget.dart';
+import '../seznamzprav_screen/widgets/viewhierarchy_item_widget.dart';
+import 'models/messageform_item_model.dart';
 import 'models/seznamzprav_model.dart';
-import 'models/viewhierarchy1_item_model.dart';
+import 'models/viewhierarchy_item_model.dart';
 import 'package:flutter/material.dart';
 import 'package:jlv_first/core/app_export.dart';
 import 'package:jlv_first/widgets/app_bar/appbar_leading_image.dart';
@@ -39,14 +39,14 @@ class SeznamzpravScreenState extends State<SeznamzpravScreen> {
                 width: double.maxFinite,
                 padding: EdgeInsets.symmetric(horizontal: 12.h, vertical: 16.v),
                 child: Column(children: [
-                  _buildMessageForm(context),
+                  _buildZprVy(context),
                   SizedBox(height: 19.v),
                   Padding(
                       padding: EdgeInsets.only(left: 8.h),
                       child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            _buildMessageList(context),
+                            _buildMessageForm(context),
                             SizedBox(height: 31.v),
                             Padding(
                                 padding: EdgeInsets.only(left: 14.h),
@@ -85,7 +85,7 @@ class SeznamzpravScreenState extends State<SeznamzpravScreen> {
   }
 
   /// Section Widget
-  Widget _buildMessageForm(BuildContext context) {
+  Widget _buildZprVy(BuildContext context) {
     return Padding(
         padding: EdgeInsets.only(left: 9.h, right: 2.h),
         child: Row(
@@ -144,7 +144,7 @@ class SeznamzpravScreenState extends State<SeznamzpravScreen> {
   }
 
   /// Section Widget
-  Widget _buildMessageList(BuildContext context) {
+  Widget _buildMessageForm(BuildContext context) {
     return Padding(
         padding: EdgeInsets.only(right: 1.h),
         child:
@@ -156,11 +156,11 @@ class SeznamzpravScreenState extends State<SeznamzpravScreen> {
                 return SizedBox(height: 23.v);
               },
               itemCount:
-                  provider.seznamzpravModelObj.messagelistItemList.length,
+                  provider.seznamzpravModelObj.messageformItemList.length,
               itemBuilder: (context, index) {
-                MessagelistItemModel model =
-                    provider.seznamzpravModelObj.messagelistItemList[index];
-                return MessagelistItemWidget(model, onTapMessageForm: () {
+                MessageformItemModel model =
+                    provider.seznamzpravModelObj.messageformItemList[index];
+                return MessageformItemWidget(model, onTapMessageForm: () {
                   onTapMessageForm(context);
                 });
               });
@@ -176,11 +176,11 @@ class SeznamzpravScreenState extends State<SeznamzpravScreen> {
           separatorBuilder: (context, index) {
             return SizedBox(height: 23.v);
           },
-          itemCount: provider.seznamzpravModelObj.viewhierarchy1ItemList.length,
+          itemCount: provider.seznamzpravModelObj.viewhierarchyItemList.length,
           itemBuilder: (context, index) {
-            Viewhierarchy1ItemModel model =
-                provider.seznamzpravModelObj.viewhierarchy1ItemList[index];
-            return Viewhierarchy1ItemWidget(model, onTapViewHierarchy: () {
+            ViewhierarchyItemModel model =
+                provider.seznamzpravModelObj.viewhierarchyItemList[index];
+            return ViewhierarchyItemWidget(model, onTapViewHierarchy: () {
               onTapViewHierarchy(context);
             });
           });
@@ -188,12 +188,12 @@ class SeznamzpravScreenState extends State<SeznamzpravScreen> {
   }
 
   /// Navigates to the detailzpravyScreen when the action is triggered.
-  onTapMessageForm(BuildContext context) {
+  onTapViewHierarchy(BuildContext context) {
     NavigatorService.pushNamed(AppRoutes.detailzpravyScreen);
   }
 
   /// Navigates to the detailzpravyScreen when the action is triggered.
-  onTapViewHierarchy(BuildContext context) {
+  onTapMessageForm(BuildContext context) {
     NavigatorService.pushNamed(AppRoutes.detailzpravyScreen);
   }
 
