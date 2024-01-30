@@ -149,7 +149,7 @@ class KartavozuScreenState extends State<KartavozuScreen> {
           Column(children: [
             Container(
                 padding: EdgeInsets.symmetric(horizontal: 18.h, vertical: 7.v),
-                decoration: AppDecoration.outlinePrimary
+                decoration: AppDecoration.outlineLightBlue
                     .copyWith(borderRadius: BorderRadiusStyle.roundedBorder10),
                 child: Row(mainAxisSize: MainAxisSize.min, children: [
                   CustomImageView(
@@ -168,10 +168,10 @@ class KartavozuScreenState extends State<KartavozuScreen> {
             Container(
                 width: 167.h,
                 padding: EdgeInsets.symmetric(horizontal: 10.h, vertical: 6.v),
-                decoration: AppDecoration.outlinePrimary
+                decoration: AppDecoration.outlineLightBlue
                     .copyWith(borderRadius: BorderRadiusStyle.roundedBorder10),
                 child: Text("lbl_j_deln_v_z".tr,
-                    style: CustomTextStyles.labelLargePrimary))
+                    style: CustomTextStyles.labelLargeLightblue900))
           ])
         ]));
   }
@@ -206,7 +206,7 @@ class KartavozuScreenState extends State<KartavozuScreen> {
     return Container(
         margin: EdgeInsets.symmetric(horizontal: 6.h),
         padding: EdgeInsets.symmetric(horizontal: 18.h, vertical: 9.v),
-        decoration: AppDecoration.outlineGray
+        decoration: AppDecoration.outlineOnError
             .copyWith(borderRadius: BorderRadiusStyle.roundedBorder10),
         child: Column(
             mainAxisSize: MainAxisSize.min,
@@ -220,13 +220,13 @@ class KartavozuScreenState extends State<KartavozuScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text("lbl_datum_zad_n".tr,
-                            style: CustomTextStyles.bodySmallBlack900),
+                            style: CustomTextStyles.bodySmallErrorContainer),
                         Text("lbl_stav".tr,
-                            style: CustomTextStyles.bodySmallBlack900)
+                            style: CustomTextStyles.bodySmallErrorContainer)
                       ])),
               SizedBox(height: 3.v),
               Text("lbl_popis_z_vady".tr,
-                  style: CustomTextStyles.bodySmallBlack900)
+                  style: CustomTextStyles.bodySmallErrorContainer)
             ]));
   }
 
@@ -275,7 +275,7 @@ class KartavozuScreenState extends State<KartavozuScreen> {
         child: Container(
             margin: EdgeInsets.symmetric(horizontal: 6.h),
             padding: EdgeInsets.symmetric(horizontal: 18.h, vertical: 3.v),
-            decoration: AppDecoration.outlineOnPrimaryContainer
+            decoration: AppDecoration.outlineRedA
                 .copyWith(borderRadius: BorderRadiusStyle.roundedBorder10),
             child: Column(
                 mainAxisSize: MainAxisSize.min,
@@ -293,8 +293,7 @@ class KartavozuScreenState extends State<KartavozuScreen> {
                             Padding(
                                 padding: EdgeInsets.only(bottom: 3.v),
                                 child: Text("lbl_nahl_eno".tr,
-                                    style: CustomTextStyles
-                                        .bodySmallOnPrimaryContainer))
+                                    style: CustomTextStyles.bodySmallRedA700))
                           ])),
                   SizedBox(height: 6.v),
                   Text("msg_profukuj_c_t_sn_n".tr,

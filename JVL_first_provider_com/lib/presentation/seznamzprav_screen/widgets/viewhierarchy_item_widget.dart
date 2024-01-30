@@ -1,18 +1,18 @@
-import '../models/viewhierarchy1_item_model.dart';
+import '../models/viewhierarchy_item_model.dart';
 import 'package:flutter/material.dart';
 import 'package:jlv_first/core/app_export.dart';
 
 // ignore: must_be_immutable
-class Viewhierarchy1ItemWidget extends StatelessWidget {
-  Viewhierarchy1ItemWidget(
-    this.viewhierarchy1ItemModelObj, {
+class ViewhierarchyItemWidget extends StatelessWidget {
+  ViewhierarchyItemWidget(
+    this.viewhierarchyItemModelObj, {
     Key? key,
     this.onTapViewHierarchy,
   }) : super(
           key: key,
         );
 
-  Viewhierarchy1ItemModel viewhierarchy1ItemModelObj;
+  ViewhierarchyItemModel viewhierarchyItemModelObj;
 
   VoidCallback? onTapViewHierarchy;
 
@@ -27,7 +27,7 @@ class Viewhierarchy1ItemWidget extends StatelessWidget {
           horizontal: 18.h,
           vertical: 6.v,
         ),
-        decoration: AppDecoration.outlineGray500.copyWith(
+        decoration: AppDecoration.outlineOnError1.copyWith(
           borderRadius: BorderRadiusStyle.roundedBorder10,
         ),
         child: Row(
@@ -41,22 +41,22 @@ class Viewhierarchy1ItemWidget extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        viewhierarchy1ItemModelObj.dateText!,
-                        style: CustomTextStyles.labelLargeGray500,
+                        viewhierarchyItemModelObj.dateText!,
+                        style: CustomTextStyles.labelLargeOnError,
                       ),
                       Padding(
                         padding: EdgeInsets.only(left: 17.h),
                         child: Text(
-                          viewhierarchy1ItemModelObj.descriptionText!,
-                          style: CustomTextStyles.labelLargeGray500,
+                          viewhierarchyItemModelObj.titleText!,
+                          style: CustomTextStyles.labelLargeOnError,
                         ),
                       ),
                     ],
                   ),
                   SizedBox(height: 6.v),
                   Text(
-                    viewhierarchy1ItemModelObj.errorText!,
-                    style: CustomTextStyles.bodySmallGray500,
+                    viewhierarchyItemModelObj.descriptionText!,
+                    style: CustomTextStyles.bodySmallOnError,
                   ),
                 ],
               ),
@@ -67,8 +67,8 @@ class Viewhierarchy1ItemWidget extends StatelessWidget {
                 bottom: 27.v,
               ),
               child: Text(
-                viewhierarchy1ItemModelObj.techDispText!,
-                style: CustomTextStyles.labelLargeGray500,
+                viewhierarchyItemModelObj.labelText!,
+                style: CustomTextStyles.labelLargeOnError,
               ),
             ),
           ],

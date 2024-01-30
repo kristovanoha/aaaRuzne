@@ -28,68 +28,98 @@ class TestScreenState extends State<TestScreen> {
         child: Scaffold(
             body: Container(
                 width: double.maxFinite,
-                padding: EdgeInsets.only(left: 38.h, top: 108.v, right: 38.h),
+                padding: EdgeInsets.symmetric(horizontal: 28.h),
                 child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Align(
-                          alignment: Alignment.center,
-                          child: GestureDetector(
-                              onTap: () {
-                                onTapLogin(context);
-                              },
-                              child: Container(
-                                  width: 267.h,
-                                  margin:
-                                      EdgeInsets.only(left: 29.h, right: 18.h),
-                                  padding: EdgeInsets.symmetric(
-                                      horizontal: 45.h, vertical: 28.v),
-                                  decoration:
-                                      AppDecoration.fillPrimaryContainer,
-                                  child: Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        SizedBox(height: 19.v),
-                                        Text("lbl_login".tr,
-                                            style: CustomTextStyles
-                                                .bodySmallBlack900)
-                                      ])))),
-                      SizedBox(height: 15.v),
-                      Align(
-                          alignment: Alignment.center,
+                      GestureDetector(
+                          onTap: () {
+                            onTapHlavniStranka(context);
+                          },
                           child: Container(
-                              margin: EdgeInsets.only(left: 29.h, right: 35.h),
+                              width: 267.h,
+                              margin: EdgeInsets.only(left: 39.h, right: 28.h),
                               padding: EdgeInsets.symmetric(
-                                  horizontal: 70.h, vertical: 28.v),
-                              decoration: AppDecoration.fillPrimaryContainer,
-                              child: Column(children: [
-                                SizedBox(height: 13.v),
-                                Text("lbl_hlavni_stranka".tr,
-                                    style: CustomTextStyles.bodySmallBlack900)
-                              ]))),
+                                  horizontal: 72.h, vertical: 34.v),
+                              decoration: AppDecoration.fillOnPrimaryContainer,
+                              child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    SizedBox(height: 2.v),
+                                    Text("lbl_login2".tr,
+                                        style: theme.textTheme.bodyMedium)
+                                  ]))),
+                      SizedBox(height: 15.v),
+                      GestureDetector(
+                          onTap: () {
+                            onTapHlavniStranka1(context);
+                          },
+                          child: Container(
+                              width: 250.h,
+                              margin: EdgeInsets.only(left: 39.h, right: 45.h),
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: 39.h, vertical: 21.v),
+                              decoration: AppDecoration.fillOnPrimaryContainer,
+                              child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    SizedBox(height: 23.v),
+                                    Text("lbl_hlavni_stranka".tr,
+                                        style: theme.textTheme.bodyMedium)
+                                  ]))),
                       SizedBox(height: 43.v),
-                      CustomElevatedButton(
-                          text: "lbl_test_tla_itko".tr,
-                          margin: EdgeInsets.only(left: 29.h, right: 63.h)),
-                      SizedBox(height: 71.v),
-                      CustomElevatedButton(
-                          text: "lbl_test_tla_itko".tr,
-                          margin: EdgeInsets.only(left: 4.h, right: 88.h)),
-                      SizedBox(height: 43.v),
-                      CustomElevatedButton(
-                          height: 72.v,
-                          text: "lbl_test_tla_itko".tr,
-                          margin: EdgeInsets.only(left: 39.h),
-                          alignment: Alignment.centerRight),
+                      _buildTestButton1(context),
+                      SizedBox(height: 18.v),
+                      _buildTestButton2(context),
+                      SizedBox(height: 18.v),
+                      _buildTestButton3(context),
+                      SizedBox(height: 37.v),
+                      _buildXxxxxxxButton(context),
                       SizedBox(height: 5.v)
                     ]))));
   }
 
+  /// Section Widget
+  Widget _buildTestButton1(BuildContext context) {
+    return CustomElevatedButton(
+        text: "lbl_test_tla_itko".tr,
+        margin: EdgeInsets.only(left: 53.h, right: 37.h));
+  }
+
+  /// Section Widget
+  Widget _buildTestButton2(BuildContext context) {
+    return CustomElevatedButton(
+        text: "lbl_test_tla_itko".tr,
+        margin: EdgeInsets.only(left: 53.h, right: 37.h));
+  }
+
+  /// Section Widget
+  Widget _buildTestButton3(BuildContext context) {
+    return CustomElevatedButton(
+        height: 72.v,
+        text: "lbl_test_tla_itko".tr,
+        margin: EdgeInsets.only(right: 59.h),
+        alignment: Alignment.centerLeft);
+  }
+
+  /// Section Widget
+  Widget _buildXxxxxxxButton(BuildContext context) {
+    return CustomElevatedButton(
+        text: "lbl_xxxxxxx".tr, margin: EdgeInsets.symmetric(horizontal: 45.h));
+  }
+
   /// Navigates to the loginScreen when the action is triggered.
-  onTapLogin(BuildContext context) {
+  onTapHlavniStranka(BuildContext context) {
     NavigatorService.pushNamed(
       AppRoutes.loginScreen,
+    );
+  }
+
+  /// Navigates to the hlavniScreen when the action is triggered.
+  onTapHlavniStranka1(BuildContext context) {
+    NavigatorService.pushNamed(
+      AppRoutes.hlavniScreen,
     );
   }
 }

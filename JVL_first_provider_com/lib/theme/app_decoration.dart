@@ -3,67 +3,67 @@ import 'package:jlv_first/core/app_export.dart';
 
 class AppDecoration {
   // Fill decorations
-  static BoxDecoration get fillOnPrimary => BoxDecoration(
-        color: theme.colorScheme.onPrimary,
+  static BoxDecoration get fillOnPrimaryContainer => BoxDecoration(
+        color: theme.colorScheme.onPrimaryContainer,
       );
-  static BoxDecoration get fillPrimaryContainer => BoxDecoration(
-        color: theme.colorScheme.primaryContainer,
+  static BoxDecoration get fillWhiteA => BoxDecoration(
+        color: appTheme.whiteA700,
       );
 
   // Outline decorations
   static BoxDecoration get outlineAmber => BoxDecoration(
-        color: theme.colorScheme.onPrimary,
+        color: appTheme.whiteA700,
         border: Border.all(
           color: appTheme.amber600,
           width: 1.h,
         ),
       );
-  static BoxDecoration get outlineBlack => BoxDecoration();
-  static BoxDecoration get outlineGray => BoxDecoration(
-        color: appTheme.gray50Ef,
+  static BoxDecoration get outlineErrorContainer => BoxDecoration();
+  static BoxDecoration get outlineLightBlue => BoxDecoration(
+        color: appTheme.whiteA700,
         border: Border.all(
-          color: appTheme.gray500,
-          width: 1.h,
-        ),
-      );
-  static BoxDecoration get outlineGray500 => BoxDecoration(
-        color: theme.colorScheme.onPrimary,
-        border: Border.all(
-          color: appTheme.gray500,
+          color: appTheme.lightBlue900,
           width: 1.h,
         ),
       );
   static BoxDecoration get outlineLightGreenA => BoxDecoration(
-        color: theme.colorScheme.onPrimary,
+        color: appTheme.whiteA700,
         border: Border.all(
           color: appTheme.lightGreenA700,
           width: 1.h,
         ),
       );
-  static BoxDecoration get outlineOnPrimaryContainer => BoxDecoration(
-        color: theme.colorScheme.onPrimary,
+  static BoxDecoration get outlineLightblue900 => BoxDecoration(
         border: Border.all(
-          color: theme.colorScheme.onPrimaryContainer,
+          color: appTheme.lightBlue900,
           width: 1.h,
         ),
       );
-  static BoxDecoration get outlinePrimary => BoxDecoration(
-        color: theme.colorScheme.onPrimary,
+  static BoxDecoration get outlineLightblue9001 => BoxDecoration(
+        color: appTheme.lightBlue900,
         border: Border.all(
-          color: theme.colorScheme.primary,
+          color: appTheme.lightBlue900,
           width: 1.h,
         ),
       );
-  static BoxDecoration get outlinePrimary1 => BoxDecoration(
+  static BoxDecoration get outlineOnError => BoxDecoration(
+        color: appTheme.gray50Ef,
         border: Border.all(
-          color: theme.colorScheme.primary,
+          color: theme.colorScheme.onError,
           width: 1.h,
         ),
       );
-  static BoxDecoration get outlinePrimary2 => BoxDecoration(
-        color: theme.colorScheme.primary,
+  static BoxDecoration get outlineOnError1 => BoxDecoration(
+        color: appTheme.whiteA700,
         border: Border.all(
-          color: theme.colorScheme.primary,
+          color: theme.colorScheme.onError,
+          width: 1.h,
+        ),
+      );
+  static BoxDecoration get outlineRedA => BoxDecoration(
+        color: appTheme.whiteA700,
+        border: Border.all(
+          color: appTheme.redA700,
           width: 1.h,
         ),
       );

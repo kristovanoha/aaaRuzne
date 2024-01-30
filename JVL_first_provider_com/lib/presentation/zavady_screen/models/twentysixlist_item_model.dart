@@ -1,8 +1,8 @@
 import '../../../core/app_export.dart';
 
-/// This class is used in the [twentysix_item_widget] screen.
-class TwentysixItemModel {
-  TwentysixItemModel({
+/// This class is used in the [twentysixlist_item_widget] screen.
+class TwentysixlistItemModel {
+  TwentysixlistItemModel({
     this.dateText,
     this.resolvedText,
     this.windowSealText,

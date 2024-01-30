@@ -62,7 +62,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             color: appTheme.gray50Ef,
             boxShadow: [
               BoxShadow(
-                color: appTheme.black900.withOpacity(0.3),
+                color: theme.colorScheme.errorContainer.withOpacity(0.3),
                 spreadRadius: 2.h,
                 blurRadius: 2.h,
                 offset: Offset(

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:jlv_first/core/app_export.dart';
 import 'package:jlv_first/presentation/detailzavady_screen/models/detailzavady_model.dart';
-import '../models/column_item_model.dart';
+import '../models/detailzavady_item_model.dart';
 
 /// A provider class for the DetailzavadyScreen.
 ///

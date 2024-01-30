@@ -178,29 +178,29 @@ class DetailzpravyScreenState extends State<DetailzpravyScreen> {
         padding: EdgeInsets.only(left: 3.h, right: 7.h),
         child:
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-          _buildZruItStack(context,
-              cancelText: "lbl_odeslat".tr,
-              closeText: "lbl".tr, onTapZruItStack: () {
-            onTapZruItStack(context);
+          _buildFortyTwoStack(context,
+              cancelButton: "lbl_odeslat".tr,
+              closeButton: "lbl".tr, onTapFortyTwoStack: () {
+            onTapFortyTwoStack(context);
           }),
-          _buildZruItStack(context,
-              cancelText: "lbl_zru_it".tr,
-              closeText: "lbl_x2".tr, onTapZruItStack: () {
-            onTapZruItStack1(context);
+          _buildFortyTwoStack(context,
+              cancelButton: "lbl_zru_it".tr,
+              closeButton: "lbl_x2".tr, onTapFortyTwoStack: () {
+            onTapFortyTwoStack1(context);
           })
         ]));
   }
 
   /// Common widget
-  Widget _buildZruItStack(
+  Widget _buildFortyTwoStack(
     BuildContext context, {
-    required String cancelText,
-    required String closeText,
-    Function? onTapZruItStack,
+    required String cancelButton,
+    required String closeButton,
+    Function? onTapFortyTwoStack,
   }) {
     return GestureDetector(
         onTap: () {
-          onTapZruItStack!.call();
+          onTapFortyTwoStack!.call();
         },
         child: Card(
             clipBehavior: Clip.antiAlias,
@@ -211,7 +211,7 @@ class DetailzpravyScreenState extends State<DetailzpravyScreen> {
             child: Container(
                 height: 60.v,
                 width: 176.h,
-                decoration: AppDecoration.outlineBlack
+                decoration: AppDecoration.outlineErrorContainer
                     .copyWith(borderRadius: BorderRadiusStyle.roundedBorder10),
                 child: Stack(alignment: Alignment.centerLeft, children: [
                   Align(
@@ -219,18 +219,19 @@ class DetailzpravyScreenState extends State<DetailzpravyScreen> {
                       child: Container(
                           padding: EdgeInsets.symmetric(
                               horizontal: 50.h, vertical: 19.v),
-                          decoration: AppDecoration.outlinePrimary.copyWith(
+                          decoration: AppDecoration.outlineLightBlue.copyWith(
                               borderRadius: BorderRadiusStyle.roundedBorder10),
-                          child: Text(cancelText,
-                              style: theme.textTheme.bodySmall!.copyWith(
-                                  color: theme.colorScheme.primary)))),
+                          child: Text(cancelButton,
+                              style: theme.textTheme.bodySmall!
+                                  .copyWith(color: appTheme.lightBlue900)))),
                   Align(
                       alignment: Alignment.centerLeft,
                       child: Padding(
                           padding: EdgeInsets.only(left: 32.h),
-                          child: Text(closeText,
-                              style: theme.textTheme.displayMedium!
-                                  .copyWith(color: appTheme.black900))))
+                          child: Text(closeButton,
+                              style: theme.textTheme.displayMedium!.copyWith(
+                                  color: theme.colorScheme.errorContainer
+                                      .withOpacity(1)))))
                 ]))));
   }
 
@@ -240,14 +241,14 @@ class DetailzpravyScreenState extends State<DetailzpravyScreen> {
   }
 
   /// Navigates to the seznamzpravScreen when the action is triggered.
-  onTapZruItStack(BuildContext context) {
+  onTapFortyTwoStack(BuildContext context) {
     NavigatorService.pushNamed(
       AppRoutes.seznamzpravScreen,
     );
   }
 
   /// Navigates to the seznamzpravScreen when the action is triggered.
-  onTapZruItStack1(BuildContext context) {
+  onTapFortyTwoStack1(BuildContext context) {
     NavigatorService.pushNamed(
       AppRoutes.seznamzpravScreen,
     );

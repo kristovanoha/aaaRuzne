@@ -9,8 +9,12 @@ final Map<String, String> enUs = {
   "msg_zapomenut_heslo": "Zapomenuté heslo",
 
   // test Screen
-  "lbl_hlavni_stranka": "Hlavni stranka", "lbl_login": "Login",
+  "lbl_hlavni_stranka": "Hlavni stranka",
+  "lbl_login2": "LOGIN",
+  "lbl_test2": "TEst ",
   "lbl_test_tla_itko": "TEst tlačitko",
+  "lbl_tla_itko": "tlačitko",
+  "lbl_xxxxxxx": "XXXXXXX",
 
   // splah Screen
   "msg_uvodni_stranka_pred": "uvodni stranka pred nactenim aplikace",

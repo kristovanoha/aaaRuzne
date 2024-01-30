@@ -27,7 +27,7 @@ class MessageformItemWidget extends StatelessWidget {
           horizontal: 18.h,
           vertical: 9.v,
         ),
-        decoration: AppDecoration.outlineGray.copyWith(
+        decoration: AppDecoration.outlineOnError.copyWith(
           borderRadius: BorderRadiusStyle.roundedBorder10,
         ),
         child: Column(
@@ -42,19 +42,19 @@ class MessageformItemWidget extends StatelessWidget {
                 children: [
                   Text(
                     messageformItemModelObj.admissionDate!,
-                    style: CustomTextStyles.bodySmallBlack900,
+                    style: CustomTextStyles.bodySmallErrorContainer,
                   ),
                   Padding(
                     padding: EdgeInsets.only(left: 17.h),
                     child: Text(
                       messageformItemModelObj.subject!,
-                      style: CustomTextStyles.bodySmallBlack900,
+                      style: CustomTextStyles.bodySmallErrorContainer,
                     ),
                   ),
                   Spacer(),
                   Text(
                     messageformItemModelObj.sender!,
-                    style: CustomTextStyles.bodySmallBlack900,
+                    style: CustomTextStyles.bodySmallErrorContainer,
                   ),
                 ],
               ),
@@ -62,7 +62,7 @@ class MessageformItemWidget extends StatelessWidget {
             SizedBox(height: 2.v),
             Text(
               messageformItemModelObj.messageBody!,
-              style: CustomTextStyles.bodySmallBlack900,
+              style: CustomTextStyles.bodySmallErrorContainer,
             ),
           ],
         ),

@@ -1,18 +1,18 @@
-import '../models/twentysix_item_model.dart';
+import '../models/twentysixlist_item_model.dart';
 import 'package:flutter/material.dart';
 import 'package:jlv_first/core/app_export.dart';
 
 // ignore: must_be_immutable
-class TwentysixItemWidget extends StatelessWidget {
-  TwentysixItemWidget(
-    this.twentysixItemModelObj, {
+class TwentysixlistItemWidget extends StatelessWidget {
+  TwentysixlistItemWidget(
+    this.twentysixlistItemModelObj, {
     Key? key,
     this.onTapTwentySix,
   }) : super(
           key: key,
         );
 
-  TwentysixItemModel twentysixItemModelObj;
+  TwentysixlistItemModel twentysixlistItemModelObj;
 
   VoidCallback? onTapTwentySix;
 
@@ -27,7 +27,7 @@ class TwentysixItemWidget extends StatelessWidget {
           horizontal: 18.h,
           vertical: 5.v,
         ),
-        decoration: AppDecoration.outlineGray500.copyWith(
+        decoration: AppDecoration.outlineOnError1.copyWith(
           borderRadius: BorderRadiusStyle.roundedBorder10,
         ),
         child: Column(
@@ -42,21 +42,21 @@ class TwentysixItemWidget extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.only(top: 1.v),
                     child: Text(
-                      twentysixItemModelObj.dateText!,
-                      style: CustomTextStyles.bodySmallGray500,
+                      twentysixlistItemModelObj.dateText!,
+                      style: CustomTextStyles.bodySmallOnError,
                     ),
                   ),
                   Text(
-                    twentysixItemModelObj.resolvedText!,
-                    style: CustomTextStyles.bodySmallGray500,
+                    twentysixlistItemModelObj.resolvedText!,
+                    style: CustomTextStyles.bodySmallOnError,
                   ),
                 ],
               ),
             ),
             SizedBox(height: 6.v),
             Text(
-              twentysixItemModelObj.windowSealText!,
-              style: CustomTextStyles.bodySmallGray500,
+              twentysixlistItemModelObj.windowSealText!,
+              style: CustomTextStyles.bodySmallOnError,
             ),
             SizedBox(height: 7.v),
           ],

@@ -1,7 +1,7 @@
-import '../zavady_screen/widgets/twentysix_item_widget.dart';
-import '../zavady_screen/widgets/viewhierarchy_item_widget.dart';
-import 'models/twentysix_item_model.dart';
-import 'models/viewhierarchy_item_model.dart';
+import '../zavady_screen/widgets/twentysixlist_item_widget.dart';
+import '../zavady_screen/widgets/viewhierarchylist_item_widget.dart';
+import 'models/twentysixlist_item_model.dart';
+import 'models/viewhierarchylist_item_model.dart';
 import 'models/zavady_model.dart';
 import 'package:flutter/material.dart';
 import 'package:jlv_first/core/app_export.dart';
@@ -46,14 +46,14 @@ class ZavadyScreenState extends State<ZavadyScreen> {
                       child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            _buildViewHierarchy(context),
+                            _buildViewHierarchyList(context),
                             SizedBox(height: 30.v),
                             Padding(
                                 padding: EdgeInsets.only(left: 13.h),
                                 child: Text("lbl_archiv_z_vad".tr,
                                     style: theme.textTheme.labelLarge)),
                             SizedBox(height: 10.v),
-                            _buildTwentySix(context)
+                            _buildTwentySixList(context)
                           ])),
                   SizedBox(height: 5.v)
                 ]))));
@@ -109,8 +109,10 @@ class ZavadyScreenState extends State<ZavadyScreen> {
                       child: Container(
                           height: 60.v,
                           width: 176.h,
-                          decoration: AppDecoration.outlineBlack.copyWith(
-                              borderRadius: BorderRadiusStyle.roundedBorder10),
+                          decoration: AppDecoration.outlineErrorContainer
+                              .copyWith(
+                                  borderRadius:
+                                      BorderRadiusStyle.roundedBorder10),
                           child:
                               Stack(alignment: Alignment.centerLeft, children: [
                             Align(
@@ -118,7 +120,7 @@ class ZavadyScreenState extends State<ZavadyScreen> {
                                 child: Container(
                                     padding: EdgeInsets.symmetric(
                                         horizontal: 42.h, vertical: 11.v),
-                                    decoration: AppDecoration.outlinePrimary
+                                    decoration: AppDecoration.outlineLightBlue
                                         .copyWith(
                                             borderRadius: BorderRadiusStyle
                                                 .roundedBorder10),
@@ -140,7 +142,7 @@ class ZavadyScreenState extends State<ZavadyScreen> {
   }
 
   /// Section Widget
-  Widget _buildViewHierarchy(BuildContext context) {
+  Widget _buildViewHierarchyList(BuildContext context) {
     return Consumer<ZavadyProvider>(builder: (context, provider, child) {
       return ListView.separated(
           physics: NeverScrollableScrollPhysics(),
@@ -148,11 +150,11 @@ class ZavadyScreenState extends State<ZavadyScreen> {
           separatorBuilder: (context, index) {
             return SizedBox(height: 23.v);
           },
-          itemCount: provider.zavadyModelObj.viewhierarchyItemList.length,
+          itemCount: provider.zavadyModelObj.viewhierarchylistItemList.length,
           itemBuilder: (context, index) {
-            ViewhierarchyItemModel model =
-                provider.zavadyModelObj.viewhierarchyItemList[index];
-            return ViewhierarchyItemWidget(model, onTapViewHierarchy: () {
+            ViewhierarchylistItemModel model =
+                provider.zavadyModelObj.viewhierarchylistItemList[index];
+            return ViewhierarchylistItemWidget(model, onTapViewHierarchy: () {
               onTapViewHierarchy(context);
             });
           });
@@ -160,7 +162,7 @@ class ZavadyScreenState extends State<ZavadyScreen> {
   }
 
   /// Section Widget
-  Widget _buildTwentySix(BuildContext context) {
+  Widget _buildTwentySixList(BuildContext context) {
     return Consumer<ZavadyProvider>(builder: (context, provider, child) {
       return ListView.separated(
           physics: NeverScrollableScrollPhysics(),
@@ -168,11 +170,11 @@ class ZavadyScreenState extends State<ZavadyScreen> {
           separatorBuilder: (context, index) {
             return SizedBox(height: 24.v);
           },
-          itemCount: provider.zavadyModelObj.twentysixItemList.length,
+          itemCount: provider.zavadyModelObj.twentysixlistItemList.length,
           itemBuilder: (context, index) {
-            TwentysixItemModel model =
-                provider.zavadyModelObj.twentysixItemList[index];
-            return TwentysixItemWidget(model, onTapTwentySix: () {
+            TwentysixlistItemModel model =
+                provider.zavadyModelObj.twentysixlistItemList[index];
+            return TwentysixlistItemWidget(model, onTapTwentySix: () {
               onTapTwentySix(context);
             });
           });

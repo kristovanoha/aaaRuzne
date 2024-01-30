@@ -1,17 +1,17 @@
-import '../models/column_item_model.dart';
+import '../models/detailzavady_item_model.dart';
 import 'package:flutter/material.dart';
 import 'package:jlv_first/core/app_export.dart';
 
 // ignore: must_be_immutable
-class ColumnItemWidget extends StatelessWidget {
-  ColumnItemWidget(
-    this.columnItemModelObj, {
+class DetailzavadyItemWidget extends StatelessWidget {
+  DetailzavadyItemWidget(
+    this.detailzavadyItemModelObj, {
     Key? key,
   }) : super(
           key: key,
         );
 
-  ColumnItemModel columnItemModelObj;
+  DetailzavadyItemModel detailzavadyItemModelObj;
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class ColumnItemWidget extends StatelessWidget {
       alignment: Alignment.center,
       child: Container(
         padding: EdgeInsets.all(17.h),
-        decoration: AppDecoration.outlinePrimary.copyWith(
+        decoration: AppDecoration.outlineLightBlue.copyWith(
           borderRadius: BorderRadiusStyle.roundedBorder10,
         ),
         child: Column(
@@ -30,7 +30,7 @@ class ColumnItemWidget extends StatelessWidget {
             SizedBox(
               width: 57.h,
               child: Text(
-                columnItemModelObj.dynamicText!,
+                detailzavadyItemModelObj.vEpnZaZen!,
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
                 style: theme.textTheme.bodySmall,

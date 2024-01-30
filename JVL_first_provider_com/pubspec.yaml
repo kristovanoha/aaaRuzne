@@ -30,3 +30,11 @@ flutter:
           weight: 400
         - asset: assets/fonts/LexendExaBold.ttf
           weight: 700
+    - family: Magra
+      fonts: 
+        - asset: assets/fonts/Magra.ttf
+          weight: 400
+    - family: Lobster Two
+      fonts: 
+        - asset: assets/fonts/LobsterTwo.ttf
+          weight: 400

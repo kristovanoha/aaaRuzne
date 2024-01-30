@@ -72,25 +72,28 @@ class LoginScreenState extends State<LoginScreen> {
                           CustomElevatedButton(
                               height: 45.v,
                               text: "lbl_p_ihl_sit_se".tr,
-                              buttonStyle: CustomButtonStyles.fillPrimary,
+                              buttonStyle: CustomButtonStyles.fillLightBlue,
                               buttonTextStyle:
-                                  CustomTextStyles.bodySmallOnPrimary,
+                                  CustomTextStyles.bodySmallWhiteA700,
                               onPressed: () {
                                 onTapPihlsitSe(context);
-                              },
-                              alignment: Alignment.topLeft),
-                          SizedBox(height: 37.v),
+                              }),
+                          SizedBox(height: 32.v),
                           Align(
                               alignment: Alignment.centerLeft,
-                              child: Text("msg_zapomenut_heslo".tr,
-                                  style: CustomTextStyles.bodySmallBlack900)),
+                              child: Padding(
+                                  padding: EdgeInsets.only(left: 73.h),
+                                  child: Text("msg_zapomenut_heslo".tr,
+                                      style: CustomTextStyles
+                                          .bodyLargeLexendExaGray900))),
                           SizedBox(height: 74.v),
                           SizedBox(
                               width: 111.h,
                               child: Text("msg_podpora_support_jlv_cz_420".tr,
                                   maxLines: 3,
                                   overflow: TextOverflow.ellipsis,
-                                  style: CustomTextStyles.bodySmallBlack900)),
+                                  style: CustomTextStyles
+                                      .bodySmallErrorContainer)),
                           SizedBox(height: 38.v),
                           Align(
                               alignment: Alignment.centerRight,
@@ -100,8 +103,8 @@ class LoginScreenState extends State<LoginScreen> {
                                   child: Text("msg_isdisp_tech_ver".tr,
                                       maxLines: 2,
                                       overflow: TextOverflow.ellipsis,
-                                      style:
-                                          CustomTextStyles.bodySmallBlack900)))
+                                      style: CustomTextStyles
+                                          .bodySmallErrorContainer)))
                         ]))))));
   }
 

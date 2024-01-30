@@ -44,10 +44,10 @@ class ThemeHelper {
       visualDensity: VisualDensity.standard,
       colorScheme: colorScheme,
       textTheme: TextThemes.textTheme(colorScheme),
-      scaffoldBackgroundColor: colorScheme.onPrimary,
+      scaffoldBackgroundColor: appTheme.whiteA700,
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-          backgroundColor: appTheme.greenA700,
+          backgroundColor: colorScheme.primary,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(13.h),
           ),
@@ -62,7 +62,7 @@ class ThemeHelper {
         style: OutlinedButton.styleFrom(
           backgroundColor: Colors.transparent,
           side: BorderSide(
-            color: colorScheme.primary,
+            color: appTheme.lightBlue900,
             width: 1.h,
           ),
           shape: RoundedRectangleBorder(
@@ -94,44 +94,50 @@ class TextThemes {
           fontFamily: 'SF Pro Text',
           fontWeight: FontWeight.w400,
         ),
+        bodyMedium: TextStyle(
+          color: colorScheme.onPrimary,
+          fontSize: 15.fSize,
+          fontFamily: 'Magra',
+          fontWeight: FontWeight.w400,
+        ),
         bodySmall: TextStyle(
-          color: colorScheme.primary,
+          color: appTheme.lightBlue900,
           fontSize: 12.fSize,
           fontFamily: 'Lexend Exa',
           fontWeight: FontWeight.w400,
         ),
         displayMedium: TextStyle(
-          color: appTheme.black900,
+          color: colorScheme.errorContainer.withOpacity(1),
           fontSize: 48.fSize,
           fontFamily: 'Lexend Exa',
           fontWeight: FontWeight.w400,
         ),
         displaySmall: TextStyle(
-          color: colorScheme.onPrimaryContainer,
+          color: colorScheme.primaryContainer,
           fontSize: 36.fSize,
-          fontFamily: 'Lexend Exa',
-          fontWeight: FontWeight.w700,
+          fontFamily: 'Lobster Two',
+          fontWeight: FontWeight.w400,
         ),
         headlineSmall: TextStyle(
-          color: appTheme.black900,
+          color: colorScheme.errorContainer.withOpacity(1),
           fontSize: 24.fSize,
           fontFamily: 'Lexend Exa',
           fontWeight: FontWeight.w400,
         ),
         labelLarge: TextStyle(
-          color: appTheme.black900,
+          color: colorScheme.errorContainer.withOpacity(1),
           fontSize: 12.fSize,
           fontFamily: 'Lexend Exa',
           fontWeight: FontWeight.w700,
         ),
         titleLarge: TextStyle(
-          color: colorScheme.onPrimaryContainer,
+          color: colorScheme.primaryContainer,
           fontSize: 20.fSize,
-          fontFamily: 'Lexend Exa',
+          fontFamily: 'Lobster Two',
           fontWeight: FontWeight.w400,
         ),
         titleMedium: TextStyle(
-          color: appTheme.black900,
+          color: colorScheme.errorContainer.withOpacity(1),
           fontSize: 17.fSize,
           fontFamily: 'SF Pro Text',
           fontWeight: FontWeight.w600,
@@ -143,13 +149,17 @@ class TextThemes {
 class ColorSchemes {
   static final primaryColorScheme = ColorScheme.light(
     // Primary colors
-    primary: Color(0XFF02458D),
-    primaryContainer: Color(0XFFD9D9D9),
+    primary: Color(0XFF1BC440),
+    primaryContainer: Color(0XFF6000FF),
     secondaryContainer: Color(0XFFD71A1A),
 
+    // Error colors
+    errorContainer: Color(0X3F000000),
+    onError: Color(0XFF979797),
+
     // On colors(text colors)
-    onPrimary: Color(0XFFFFFFFF),
-    onPrimaryContainer: Color(0XFFFF0000),
+    onPrimary: Color(0XFF2300FD),
+    onPrimaryContainer: Color(0XFFD9D9D9),
   );
 }
 
@@ -160,6 +170,9 @@ class PrimaryColors {
 
   // Black
   Color get black900 => Color(0XFF000000);
+
+  // DeepPurple
+  Color get deepPurpleA700 => Color(0XFF2300FD);
 
   // Gray
   Color get gray200 => Color(0XFFF0F0F0);
@@ -173,10 +186,17 @@ class PrimaryColors {
   Color get greenA700 => Color(0XFF1BC440);
 
   // LightBlue
+  Color get lightBlue900 => Color(0XFF02458D);
   Color get lightBlueA700 => Color(0XFF007AFF);
 
   // LightGreen
   Color get lightGreenA700 => Color(0XFF58E435);
+
+  // Red
+  Color get redA700 => Color(0XFFFF0000);
+
+  // White
+  Color get whiteA700 => Color(0XFFFFFFFF);
 }
 
 PrimaryColors get appTheme => ThemeHelper().themeColor();

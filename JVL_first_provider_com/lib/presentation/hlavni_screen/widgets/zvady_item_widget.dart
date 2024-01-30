@@ -28,19 +28,19 @@ class ZvadyItemWidget extends StatelessWidget {
       label: Text(
         zvadyItemModelObj.zvady!,
         style: TextStyle(
-          color: theme.colorScheme.primary,
+          color: appTheme.lightBlue900,
           fontSize: 12.fSize,
           fontFamily: 'Lexend Exa',
           fontWeight: FontWeight.w400,
         ),
       ),
       selected: (zvadyItemModelObj.isSelected ?? false),
-      backgroundColor: theme.colorScheme.onPrimary,
-      selectedColor: theme.colorScheme.onPrimary,
+      backgroundColor: appTheme.whiteA700,
+      selectedColor: appTheme.whiteA700,
       shape: (zvadyItemModelObj.isSelected ?? false)
           ? RoundedRectangleBorder(
               side: BorderSide(
-                color: theme.colorScheme.onPrimary.withOpacity(0.6),
+                color: appTheme.whiteA700.withOpacity(0.6),
                 width: 1.h,
               ),
               borderRadius: BorderRadius.circular(
@@ -49,7 +49,7 @@ class ZvadyItemWidget extends StatelessWidget {
             )
           : RoundedRectangleBorder(
               side: BorderSide(
-                color: theme.colorScheme.primary,
+                color: appTheme.lightBlue900,
                 width: 1.h,
               ),
               borderRadius: BorderRadius.circular(

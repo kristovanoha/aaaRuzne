@@ -1,5 +1,5 @@
-import '../detailzavady_screen/widgets/column_item_widget.dart';
-import 'models/column_item_model.dart';
+import '../detailzavady_screen/widgets/detailzavady_item_widget.dart';
+import 'models/detailzavady_item_model.dart';
 import 'models/detailzavady_model.dart';
 import 'package:flutter/material.dart';
 import 'package:jlv_first/core/app_export.dart';
@@ -131,9 +131,8 @@ class DetailzavadyScreenState extends State<DetailzavadyScreen> {
                                                                   right: 4.h),
                                                           child: Text(
                                                               "lbl_x".tr,
-                                                              style: theme
-                                                                  .textTheme
-                                                                  .displaySmall)))
+                                                              style: CustomTextStyles
+                                                                  .displaySmallLexendExaRedA700)))
                                                 ]))
                                       ]))))
                     ])),
@@ -234,7 +233,7 @@ class DetailzavadyScreenState extends State<DetailzavadyScreen> {
                                   Container(
                                       padding: EdgeInsets.symmetric(
                                           horizontal: 9.h, vertical: 5.v),
-                                      decoration: AppDecoration.outlinePrimary
+                                      decoration: AppDecoration.outlineLightBlue
                                           .copyWith(
                                               borderRadius: BorderRadiusStyle
                                                   .roundedBorder10),
@@ -253,7 +252,7 @@ class DetailzavadyScreenState extends State<DetailzavadyScreen> {
                                   Container(
                                       padding: EdgeInsets.symmetric(
                                           horizontal: 9.h, vertical: 5.v),
-                                      decoration: AppDecoration.outlinePrimary
+                                      decoration: AppDecoration.outlineLightBlue
                                           .copyWith(
                                               borderRadius: BorderRadiusStyle
                                                   .roundedBorder10),
@@ -331,9 +330,10 @@ class DetailzavadyScreenState extends State<DetailzavadyScreen> {
                             margin: EdgeInsets.only(left: 221.h, bottom: 168.v),
                             padding: EdgeInsets.symmetric(
                                 horizontal: 11.h, vertical: 5.v),
-                            decoration: AppDecoration.outlinePrimary1.copyWith(
-                                borderRadius:
-                                    BorderRadiusStyle.roundedBorder10),
+                            decoration: AppDecoration.outlineLightblue900
+                                .copyWith(
+                                    borderRadius:
+                                        BorderRadiusStyle.roundedBorder10),
                             child: Row(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
@@ -370,7 +370,7 @@ class DetailzavadyScreenState extends State<DetailzavadyScreen> {
                       margin: EdgeInsets.only(
                           left: 127.h, right: 127.h, bottom: 1.v),
                       padding: EdgeInsets.all(17.h),
-                      decoration: AppDecoration.outlinePrimary1.copyWith(
+                      decoration: AppDecoration.outlineLightblue900.copyWith(
                           borderRadius: BorderRadiusStyle.roundedBorder10),
                       child: Column(
                           mainAxisSize: MainAxisSize.min,
@@ -406,12 +406,12 @@ class DetailzavadyScreenState extends State<DetailzavadyScreen> {
                     staggeredTileBuilder: (index) {
                       return StaggeredTile.fit(2);
                     },
-                    itemCount:
-                        provider.detailzavadyModelObj.columnItemList.length,
+                    itemCount: provider
+                        .detailzavadyModelObj.detailzavadyItemList.length,
                     itemBuilder: (context, index) {
-                      ColumnItemModel model =
-                          provider.detailzavadyModelObj.columnItemList[index];
-                      return ColumnItemWidget(model);
+                      DetailzavadyItemModel model = provider
+                          .detailzavadyModelObj.detailzavadyItemList[index];
+                      return DetailzavadyItemWidget(model);
                     });
               })
             ])));
@@ -435,14 +435,14 @@ class DetailzavadyScreenState extends State<DetailzavadyScreen> {
                   child: Container(
                       height: 60.v,
                       width: 106.h,
-                      decoration: AppDecoration.outlineBlack.copyWith(
+                      decoration: AppDecoration.outlineErrorContainer.copyWith(
                           borderRadius: BorderRadiusStyle.roundedBorder10),
                       child: Stack(alignment: Alignment.centerLeft, children: [
                         Align(
                             alignment: Alignment.centerRight,
                             child: Container(
                                 margin: EdgeInsets.only(left: 50.h),
-                                decoration: AppDecoration.outlinePrimary
+                                decoration: AppDecoration.outlineLightBlue
                                     .copyWith(
                                         borderRadius:
                                             BorderRadiusStyle.roundedBorder10),
@@ -466,7 +466,7 @@ class DetailzavadyScreenState extends State<DetailzavadyScreen> {
                   child: Container(
                       height: 60.v,
                       width: 176.h,
-                      decoration: AppDecoration.outlineBlack.copyWith(
+                      decoration: AppDecoration.outlineErrorContainer.copyWith(
                           borderRadius: BorderRadiusStyle.roundedBorder10),
                       child: Stack(alignment: Alignment.centerLeft, children: [
                         Align(
@@ -474,7 +474,7 @@ class DetailzavadyScreenState extends State<DetailzavadyScreen> {
                             child: Container(
                                 padding: EdgeInsets.symmetric(
                                     horizontal: 50.h, vertical: 19.v),
-                                decoration: AppDecoration.outlinePrimary
+                                decoration: AppDecoration.outlineLightBlue
                                     .copyWith(
                                         borderRadius:
                                             BorderRadiusStyle.roundedBorder10),

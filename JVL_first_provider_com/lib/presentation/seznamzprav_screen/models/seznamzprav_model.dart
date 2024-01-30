@@ -1,6 +1,6 @@
 import '../../../core/app_export.dart';
 import 'messageform_item_model.dart';
-import 'viewhierarchy1_item_model.dart';
+import 'viewhierarchy_item_model.dart';
 
 class SeznamzpravModel {
   List<MessageformItemModel> messageformItemList = [
@@ -22,12 +22,12 @@ class SeznamzpravModel {
     MessageformItemModel(messageBody: "tech. disp.")
   ];
 
-  List<Viewhierarchy1ItemModel> viewhierarchy1ItemList = [
-    Viewhierarchy1ItemModel(
+  List<ViewhierarchyItemModel> viewhierarchyItemList = [
+    ViewhierarchyItemModel(
         dateText: "24.1.2024",
-        descriptionText: "V řešení",
-        errorText: "Závada číslo 12345 je v řešení.",
-        techDispText: "tech. disp."),
-    Viewhierarchy1ItemModel(techDispText: "Svíčková je super, ale je jí málo.")
+        titleText: "V řešení",
+        descriptionText: "Závada číslo 12345 je v řešení.",
+        labelText: "tech. disp."),
+    ViewhierarchyItemModel(labelText: "Svíčková je super, ale je jí málo.")
   ];
 }

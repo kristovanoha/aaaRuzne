@@ -9,22 +9,23 @@ import 'package:jlv_first/presentation/druhy_screen/models/druhy_model.dart';
 
 // ignore_for_file: must_be_immutable
 class DruhyProvider extends ChangeNotifier {
-  TextEditingController faultsController = TextEditingController();
+  TextEditingController faultsEditTextController = TextEditingController();
 
-  TextEditingController carCardController = TextEditingController();
+  TextEditingController carCardEditTextController = TextEditingController();
 
-  TextEditingController setTemperatureController = TextEditingController();
+  TextEditingController setTemperatureEditTextController =
+      TextEditingController();
 
-  TextEditingController messagesController = TextEditingController();
+  TextEditingController messagesEditTextController = TextEditingController();
 
   DruhyModel druhyModelObj = DruhyModel();
 
   @override
   void dispose() {
     super.dispose();
-    faultsController.dispose();
-    carCardController.dispose();
-    setTemperatureController.dispose();
-    messagesController.dispose();
+    faultsEditTextController.dispose();
+    carCardEditTextController.dispose();
+    setTemperatureEditTextController.dispose();
+    messagesEditTextController.dispose();
   }
 }

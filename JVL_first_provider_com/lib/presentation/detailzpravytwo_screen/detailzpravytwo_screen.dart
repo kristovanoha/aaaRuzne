@@ -51,7 +51,7 @@ class DetailzpravytwoScreenState extends State<DetailzpravytwoScreen> {
                           padding: EdgeInsets.only(left: 8.h, right: 84.h),
                           child: Row(children: [
                             _buildDateTimeEditText(context),
-                            _buildDateTimeButton(context)
+                            _buildNowButton(context)
                           ])),
                       SizedBox(height: 21.v),
                       Padding(
@@ -61,7 +61,7 @@ class DetailzpravytwoScreenState extends State<DetailzpravytwoScreen> {
                             Container(
                                 margin: EdgeInsets.only(left: 9.h),
                                 padding: EdgeInsets.symmetric(horizontal: 32.h),
-                                decoration: AppDecoration.outlinePrimary1
+                                decoration: AppDecoration.outlineLightblue900
                                     .copyWith(
                                         borderRadius:
                                             BorderRadiusStyle.roundedBorder10),
@@ -73,7 +73,7 @@ class DetailzpravytwoScreenState extends State<DetailzpravytwoScreen> {
                                       SizedBox(height: 14.v),
                                       Text("lbl_8".tr,
                                           style: CustomTextStyles
-                                              .displayMediumPrimary)
+                                              .displayMediumLightblue900)
                                     ])),
                             _buildPlusButton(context)
                           ])),
@@ -191,7 +191,7 @@ class DetailzpravytwoScreenState extends State<DetailzpravytwoScreen> {
   }
 
   /// Section Widget
-  Widget _buildDateTimeButton(BuildContext context) {
+  Widget _buildNowButton(BuildContext context) {
     return CustomOutlinedButton(
         height: 29.v,
         width: 61.h,
@@ -205,8 +205,8 @@ class DetailzpravytwoScreenState extends State<DetailzpravytwoScreen> {
         height: 74.v,
         width: 82.h,
         text: "lbl2".tr,
-        buttonStyle: CustomButtonStyles.outlinePrimaryTL10,
-        buttonTextStyle: CustomTextStyles.displayMediumOnPrimary);
+        buttonStyle: CustomButtonStyles.outlineLightBlueTL10,
+        buttonTextStyle: CustomTextStyles.displayMediumWhiteA700);
   }
 
   /// Section Widget
@@ -216,8 +216,8 @@ class DetailzpravytwoScreenState extends State<DetailzpravytwoScreen> {
         width: 82.h,
         text: "lbl".tr,
         margin: EdgeInsets.only(left: 8.h),
-        buttonStyle: CustomButtonStyles.outlinePrimaryTL10,
-        buttonTextStyle: CustomTextStyles.displayMediumOnPrimary);
+        buttonStyle: CustomButtonStyles.outlineLightBlueTL10,
+        buttonTextStyle: CustomTextStyles.displayMediumWhiteA700);
   }
 
   /// Section Widget
@@ -245,13 +245,13 @@ class DetailzpravytwoScreenState extends State<DetailzpravytwoScreen> {
         child:
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
           _buildCancelStack(context,
-              cancelButtonText: "lbl_odeslat".tr,
-              closeButtonText: "lbl".tr, onTapCancelStack: () {
+              cancelText: "lbl_odeslat".tr,
+              closeText: "lbl".tr, onTapCancelStack: () {
             onTapCancelStack(context);
           }),
           _buildCancelStack(context,
-              cancelButtonText: "lbl_zru_it".tr,
-              closeButtonText: "lbl_x2".tr, onTapCancelStack: () {
+              cancelText: "lbl_zru_it".tr,
+              closeText: "lbl_x2".tr, onTapCancelStack: () {
             onTapCancelStack1(context);
           })
         ]));
@@ -260,8 +260,8 @@ class DetailzpravytwoScreenState extends State<DetailzpravytwoScreen> {
   /// Common widget
   Widget _buildCancelStack(
     BuildContext context, {
-    required String cancelButtonText,
-    required String closeButtonText,
+    required String cancelText,
+    required String closeText,
     Function? onTapCancelStack,
   }) {
     return GestureDetector(
@@ -277,7 +277,7 @@ class DetailzpravytwoScreenState extends State<DetailzpravytwoScreen> {
             child: Container(
                 height: 60.v,
                 width: 176.h,
-                decoration: AppDecoration.outlineBlack
+                decoration: AppDecoration.outlineErrorContainer
                     .copyWith(borderRadius: BorderRadiusStyle.roundedBorder10),
                 child: Stack(alignment: Alignment.centerLeft, children: [
                   Align(
@@ -285,18 +285,19 @@ class DetailzpravytwoScreenState extends State<DetailzpravytwoScreen> {
                       child: Container(
                           padding: EdgeInsets.symmetric(
                               horizontal: 50.h, vertical: 19.v),
-                          decoration: AppDecoration.outlinePrimary.copyWith(
+                          decoration: AppDecoration.outlineLightBlue.copyWith(
                               borderRadius: BorderRadiusStyle.roundedBorder10),
-                          child: Text(cancelButtonText,
-                              style: theme.textTheme.bodySmall!.copyWith(
-                                  color: theme.colorScheme.primary)))),
+                          child: Text(cancelText,
+                              style: theme.textTheme.bodySmall!
+                                  .copyWith(color: appTheme.lightBlue900)))),
                   Align(
                       alignment: Alignment.centerLeft,
                       child: Padding(
                           padding: EdgeInsets.only(left: 32.h),
-                          child: Text(closeButtonText,
-                              style: theme.textTheme.displayMedium!
-                                  .copyWith(color: appTheme.black900))))
+                          child: Text(closeText,
+                              style: theme.textTheme.displayMedium!.copyWith(
+                                  color: theme.colorScheme.errorContainer
+                                      .withOpacity(1)))))
                 ]))));
   }
 

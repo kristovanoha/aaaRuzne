@@ -103,7 +103,7 @@ class CustomTextFormField extends StatelessWidget {
       );
   InputDecoration get decoration => InputDecoration(
         hintText: hintText ?? "",
-        hintStyle: hintStyle ?? CustomTextStyles.bodySmallBlack900,
+        hintStyle: hintStyle ?? CustomTextStyles.bodySmallErrorContainer,
         prefixIcon: prefix,
         prefixIconConstraints: prefixConstraints,
         suffixIcon: suffix,
@@ -116,7 +116,7 @@ class CustomTextFormField extends StatelessWidget {
             OutlineInputBorder(
               borderRadius: BorderRadius.circular(10.h),
               borderSide: BorderSide(
-                color: appTheme.black900,
+                color: theme.colorScheme.errorContainer.withOpacity(1),
                 width: 1,
               ),
             ),
@@ -124,7 +124,7 @@ class CustomTextFormField extends StatelessWidget {
             OutlineInputBorder(
               borderRadius: BorderRadius.circular(10.h),
               borderSide: BorderSide(
-                color: appTheme.black900,
+                color: theme.colorScheme.errorContainer.withOpacity(1),
                 width: 1,
               ),
             ),
@@ -132,7 +132,7 @@ class CustomTextFormField extends StatelessWidget {
             OutlineInputBorder(
               borderRadius: BorderRadius.circular(10.h),
               borderSide: BorderSide(
-                color: theme.colorScheme.primary,
+                color: appTheme.lightBlue900,
                 width: 1,
               ),
             ),

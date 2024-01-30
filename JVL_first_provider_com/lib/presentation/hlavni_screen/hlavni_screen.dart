@@ -79,7 +79,7 @@ class HlavniScreenState extends State<HlavniScreen> {
                   margin: EdgeInsets.only(right: 6.h),
                   padding:
                       EdgeInsets.symmetric(horizontal: 18.h, vertical: 5.v),
-                  decoration: AppDecoration.outlineOnPrimaryContainer.copyWith(
+                  decoration: AppDecoration.outlineRedA.copyWith(
                       borderRadius: BorderRadiusStyle.roundedBorder10),
                   child: Column(
                       mainAxisSize: MainAxisSize.min,
@@ -99,7 +99,7 @@ class HlavniScreenState extends State<HlavniScreen> {
                                       padding: EdgeInsets.only(bottom: 2.v),
                                       child: Text("lbl_dispe_ink".tr,
                                           style: CustomTextStyles
-                                              .bodySmallOnPrimaryContainer))
+                                              .bodySmallRedA700))
                                 ])),
                         SizedBox(height: 6.v),
                         Text("msg_pozor_je_m_lo_sv_kov".tr,
@@ -169,13 +169,13 @@ class HlavniScreenState extends State<HlavniScreen> {
                       margin: EdgeInsets.only(left: 48.h, right: 90.h),
                       padding: EdgeInsets.symmetric(
                           horizontal: 56.h, vertical: 34.v),
-                      decoration: AppDecoration.fillPrimaryContainer,
+                      decoration: AppDecoration.fillOnPrimaryContainer,
                       child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             SizedBox(height: 14.v),
                             Text("lbl_test".tr,
-                                style: CustomTextStyles.bodySmallBlack900)
+                                style: CustomTextStyles.bodySmallErrorContainer)
                           ]))))
         ]));
   }

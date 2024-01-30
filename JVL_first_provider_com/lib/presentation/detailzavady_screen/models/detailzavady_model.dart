@@ -1,9 +1,9 @@
 import '../../../core/app_export.dart';
-import 'column_item_model.dart';
+import 'detailzavady_item_model.dart';
 
 class DetailzavadyModel {
-  List<ColumnItemModel> columnItemList = [
-    ColumnItemModel(dynamicText: "Výčepní zařízení"),
-    ColumnItemModel(dynamicText: "Konvektomat")
+  List<DetailzavadyItemModel> detailzavadyItemList = [
+    DetailzavadyItemModel(vEpnZaZen: "Výčepní zařízení"),
+    DetailzavadyItemModel(vEpnZaZen: "Konvektomat")
   ];
 }

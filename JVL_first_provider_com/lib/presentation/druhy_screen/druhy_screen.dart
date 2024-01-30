@@ -43,7 +43,7 @@ class DruhyScreenState extends State<DruhyScreen> {
                   SizedBox(height: 13.v),
                   _buildFaultsRow(context)
                 ])),
-            bottomNavigationBar: _buildSetTemperature1(context)));
+            bottomNavigationBar: _buildSetTemperature(context)));
   }
 
   /// Section Widget
@@ -55,7 +55,7 @@ class DruhyScreenState extends State<DruhyScreen> {
         child: Container(
             margin: EdgeInsets.only(right: 3.h),
             padding: EdgeInsets.symmetric(horizontal: 18.h, vertical: 5.v),
-            decoration: AppDecoration.outlineOnPrimaryContainer
+            decoration: AppDecoration.outlineRedA
                 .copyWith(borderRadius: BorderRadiusStyle.roundedBorder10),
             child: Column(
                 mainAxisSize: MainAxisSize.min,
@@ -73,8 +73,7 @@ class DruhyScreenState extends State<DruhyScreen> {
                             Padding(
                                 padding: EdgeInsets.only(bottom: 2.v),
                                 child: Text("lbl_dispe_ink".tr,
-                                    style: CustomTextStyles
-                                        .bodySmallOnPrimaryContainer))
+                                    style: CustomTextStyles.bodySmallRedA700))
                           ])),
                   SizedBox(height: 6.v),
                   Text("msg_pozor_je_m_lo_sv_kov".tr,
@@ -121,15 +120,16 @@ class DruhyScreenState extends State<DruhyScreen> {
   }
 
   /// Section Widget
-  Widget _buildFaults(BuildContext context) {
+  Widget _buildFaultsEditText(BuildContext context) {
     return Expanded(
         child: Padding(
             padding: EdgeInsets.only(right: 13.h),
             child: Selector<DruhyProvider, TextEditingController?>(
-                selector: (context, provider) => provider.faultsController,
-                builder: (context, faultsController, child) {
+                selector: (context, provider) =>
+                    provider.faultsEditTextController,
+                builder: (context, faultsEditTextController, child) {
                   return CustomTextFormField(
-                      controller: faultsController,
+                      controller: faultsEditTextController,
                       hintText: "lbl_z_vady".tr,
                       contentPadding: EdgeInsets.symmetric(
                           horizontal: 12.h, vertical: 26.v));
@@ -137,15 +137,16 @@ class DruhyScreenState extends State<DruhyScreen> {
   }
 
   /// Section Widget
-  Widget _buildCarCard(BuildContext context) {
+  Widget _buildCarCardEditText(BuildContext context) {
     return Expanded(
         child: Padding(
             padding: EdgeInsets.only(left: 13.h),
             child: Selector<DruhyProvider, TextEditingController?>(
-                selector: (context, provider) => provider.carCardController,
-                builder: (context, carCardController, child) {
+                selector: (context, provider) =>
+                    provider.carCardEditTextController,
+                builder: (context, carCardEditTextController, child) {
                   return CustomTextFormField(
-                      controller: carCardController,
+                      controller: carCardEditTextController,
                       hintText: "lbl_karta_vozu".tr,
                       contentPadding: EdgeInsets.symmetric(
                           horizontal: 13.h, vertical: 26.v));
@@ -156,22 +157,23 @@ class DruhyScreenState extends State<DruhyScreen> {
   Widget _buildFaultsRow(BuildContext context) {
     return Padding(
         padding: EdgeInsets.symmetric(horizontal: 11.h),
-        child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [_buildFaults(context), _buildCarCard(context)]));
+        child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+          _buildFaultsEditText(context),
+          _buildCarCardEditText(context)
+        ]));
   }
 
   /// Section Widget
-  Widget _buildSetTemperature(BuildContext context) {
+  Widget _buildSetTemperatureEditText(BuildContext context) {
     return Expanded(
         child: Padding(
             padding: EdgeInsets.only(right: 13.h),
             child: Selector<DruhyProvider, TextEditingController?>(
                 selector: (context, provider) =>
-                    provider.setTemperatureController,
-                builder: (context, setTemperatureController, child) {
+                    provider.setTemperatureEditTextController,
+                builder: (context, setTemperatureEditTextController, child) {
                   return CustomTextFormField(
-                      controller: setTemperatureController,
+                      controller: setTemperatureEditTextController,
                       hintText: "lbl_zadat_teplotu".tr,
                       contentPadding: EdgeInsets.symmetric(
                           horizontal: 12.h, vertical: 26.v));
@@ -179,15 +181,16 @@ class DruhyScreenState extends State<DruhyScreen> {
   }
 
   /// Section Widget
-  Widget _buildMessages(BuildContext context) {
+  Widget _buildMessagesEditText(BuildContext context) {
     return Expanded(
         child: Padding(
             padding: EdgeInsets.only(left: 13.h),
             child: Selector<DruhyProvider, TextEditingController?>(
-                selector: (context, provider) => provider.messagesController,
-                builder: (context, messagesController, child) {
+                selector: (context, provider) =>
+                    provider.messagesEditTextController,
+                builder: (context, messagesEditTextController, child) {
                   return CustomTextFormField(
-                      controller: messagesController,
+                      controller: messagesEditTextController,
                       hintText: "lbl_zpr_vy".tr,
                       textInputAction: TextInputAction.done,
                       contentPadding: EdgeInsets.symmetric(
@@ -196,12 +199,12 @@ class DruhyScreenState extends State<DruhyScreen> {
   }
 
   /// Section Widget
-  Widget _buildSetTemperature1(BuildContext context) {
+  Widget _buildSetTemperature(BuildContext context) {
     return Padding(
         padding: EdgeInsets.only(left: 25.h, right: 25.h, bottom: 18.v),
         child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-          _buildSetTemperature(context),
-          _buildMessages(context)
+          _buildSetTemperatureEditText(context),
+          _buildMessagesEditText(context)
         ]));
   }
 

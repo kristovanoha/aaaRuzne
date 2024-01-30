@@ -39,7 +39,7 @@ class SplahScreenState extends State<SplahScreen> {
                     children: [
                       SizedBox(height: 5.v),
                       Text("msg_uvodni_stranka_pred".tr,
-                          style: CustomTextStyles.bodySmallBlack900)
+                          style: CustomTextStyles.bodySmallErrorContainer)
                     ]))));
   }
 }

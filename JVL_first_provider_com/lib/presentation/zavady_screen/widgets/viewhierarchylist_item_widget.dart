@@ -1,18 +1,18 @@
-import '../models/viewhierarchy_item_model.dart';
+import '../models/viewhierarchylist_item_model.dart';
 import 'package:flutter/material.dart';
 import 'package:jlv_first/core/app_export.dart';
 
 // ignore: must_be_immutable
-class ViewhierarchyItemWidget extends StatelessWidget {
-  ViewhierarchyItemWidget(
-    this.viewhierarchyItemModelObj, {
+class ViewhierarchylistItemWidget extends StatelessWidget {
+  ViewhierarchylistItemWidget(
+    this.viewhierarchylistItemModelObj, {
     Key? key,
     this.onTapViewHierarchy,
   }) : super(
           key: key,
         );
 
-  ViewhierarchyItemModel viewhierarchyItemModelObj;
+  ViewhierarchylistItemModel viewhierarchylistItemModelObj;
 
   VoidCallback? onTapViewHierarchy;
 
@@ -27,7 +27,7 @@ class ViewhierarchyItemWidget extends StatelessWidget {
           horizontal: 18.h,
           vertical: 9.v,
         ),
-        decoration: AppDecoration.outlineGray.copyWith(
+        decoration: AppDecoration.outlineOnError.copyWith(
           borderRadius: BorderRadiusStyle.roundedBorder10,
         ),
         child: Column(
@@ -41,28 +41,28 @@ class ViewhierarchyItemWidget extends StatelessWidget {
               child: Row(
                 children: [
                   Text(
-                    viewhierarchyItemModelObj.datumZadaniText!,
-                    style: CustomTextStyles.bodySmallBlack900,
+                    viewhierarchylistItemModelObj.datumZadani!,
+                    style: CustomTextStyles.bodySmallErrorContainer,
                   ),
                   Padding(
                     padding: EdgeInsets.only(left: 14.h),
                     child: Text(
-                      viewhierarchyItemModelObj.resitelText!,
-                      style: CustomTextStyles.bodySmallBlack900,
+                      viewhierarchylistItemModelObj.resitel!,
+                      style: CustomTextStyles.bodySmallErrorContainer,
                     ),
                   ),
                   Spacer(),
                   Text(
-                    viewhierarchyItemModelObj.stavText!,
-                    style: CustomTextStyles.bodySmallBlack900,
+                    viewhierarchylistItemModelObj.stav!,
+                    style: CustomTextStyles.bodySmallErrorContainer,
                   ),
                 ],
               ),
             ),
             SizedBox(height: 3.v),
             Text(
-              viewhierarchyItemModelObj.popisZavadyText!,
-              style: CustomTextStyles.bodySmallBlack900,
+              viewhierarchylistItemModelObj.popisZavady!,
+              style: CustomTextStyles.bodySmallErrorContainer,
             ),
           ],
         ),

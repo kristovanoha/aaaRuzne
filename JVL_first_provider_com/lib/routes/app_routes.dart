@@ -52,6 +52,6 @@ class AppRoutes {
         detailzpravytwoScreen: DetailzpravytwoScreen.builder,
         druhyScreen: DruhyScreen.builder,
         appNavigationScreen: AppNavigationScreen.builder,
-        initialRoute: SplahScreen.builder
+        initialRoute: LoginScreen.builder
       };
 }
