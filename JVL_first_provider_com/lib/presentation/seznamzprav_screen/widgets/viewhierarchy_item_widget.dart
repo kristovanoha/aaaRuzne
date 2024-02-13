@@ -27,7 +27,7 @@ class ViewhierarchyItemWidget extends StatelessWidget {
           horizontal: 18.h,
           vertical: 6.v,
         ),
-        decoration: AppDecoration.outlineOnError1.copyWith(
+        decoration: AppDecoration.outlineGray500.copyWith(
           borderRadius: BorderRadiusStyle.roundedBorder10,
         ),
         child: Row(
@@ -42,13 +42,13 @@ class ViewhierarchyItemWidget extends StatelessWidget {
                     children: [
                       Text(
                         viewhierarchyItemModelObj.dateText!,
-                        style: CustomTextStyles.labelLargeOnError,
+                        style: CustomTextStyles.labelLargeGray500,
                       ),
                       Padding(
                         padding: EdgeInsets.only(left: 17.h),
                         child: Text(
                           viewhierarchyItemModelObj.titleText!,
-                          style: CustomTextStyles.labelLargeOnError,
+                          style: CustomTextStyles.labelLargeGray500,
                         ),
                       ),
                     ],
@@ -56,7 +56,7 @@ class ViewhierarchyItemWidget extends StatelessWidget {
                   SizedBox(height: 6.v),
                   Text(
                     viewhierarchyItemModelObj.descriptionText!,
-                    style: CustomTextStyles.bodySmallOnError,
+                    style: CustomTextStyles.bodySmallGray500,
                   ),
                 ],
               ),
@@ -68,7 +68,7 @@ class ViewhierarchyItemWidget extends StatelessWidget {
               ),
               child: Text(
                 viewhierarchyItemModelObj.labelText!,
-                style: CustomTextStyles.labelLargeOnError,
+                style: CustomTextStyles.labelLargeGray500,
               ),
             ),
           ],

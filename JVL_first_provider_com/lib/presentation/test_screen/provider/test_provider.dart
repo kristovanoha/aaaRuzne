@@ -9,10 +9,13 @@ import 'package:jlv_first/presentation/test_screen/models/test_model.dart';
 
 // ignore_for_file: must_be_immutable
 class TestProvider extends ChangeNotifier {
+  TextEditingController buttonOneWidgetController = TextEditingController();
+
   TestModel testModelObj = TestModel();
 
   @override
   void dispose() {
     super.dispose();
+    buttonOneWidgetController.dispose();
   }
 }

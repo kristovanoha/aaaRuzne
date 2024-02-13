@@ -27,7 +27,7 @@ class ViewhierarchylistItemWidget extends StatelessWidget {
           horizontal: 18.h,
           vertical: 9.v,
         ),
-        decoration: AppDecoration.outlineOnError.copyWith(
+        decoration: AppDecoration.outlineGray.copyWith(
           borderRadius: BorderRadiusStyle.roundedBorder10,
         ),
         child: Column(

@@ -11,6 +11,12 @@ class CustomButtonStyles {
           borderRadius: BorderRadius.circular(10.h),
         ),
       );
+  static ButtonStyle get fillOnError => ElevatedButton.styleFrom(
+        backgroundColor: theme.colorScheme.onError,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(13.h),
+        ),
+      );
 
   // Outline button style
   static ButtonStyle get outlineLightBlueTL10 => OutlinedButton.styleFrom(

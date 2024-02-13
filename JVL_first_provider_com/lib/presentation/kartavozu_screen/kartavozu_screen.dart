@@ -206,7 +206,7 @@ class KartavozuScreenState extends State<KartavozuScreen> {
     return Container(
         margin: EdgeInsets.symmetric(horizontal: 6.h),
         padding: EdgeInsets.symmetric(horizontal: 18.h, vertical: 9.v),
-        decoration: AppDecoration.outlineOnError
+        decoration: AppDecoration.outlineGray
             .copyWith(borderRadius: BorderRadiusStyle.roundedBorder10),
         child: Column(
             mainAxisSize: MainAxisSize.min,

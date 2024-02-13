@@ -9,12 +9,14 @@ class ThemeHelper {
 
 // A map of custom color themes supported by the app
   Map<String, PrimaryColors> _supportedCustomColor = {
-    'primary': PrimaryColors()
+    'primary': PrimaryColors(),
+    'secondary': SecondaryColors()
   };
 
 // A map of color schemes supported by the app
   Map<String, ColorScheme> _supportedColorScheme = {
-    'primary': ColorSchemes.primaryColorScheme
+    'primary': ColorSchemes.primaryColorScheme,
+    'secondary': ColorSchemes.secondaryColorScheme
   };
 
   /// Returns the primary colors for the current theme.
@@ -142,6 +144,12 @@ class TextThemes {
           fontFamily: 'SF Pro Text',
           fontWeight: FontWeight.w600,
         ),
+        titleSmall: TextStyle(
+          color: colorScheme.onPrimary,
+          fontSize: 15.fSize,
+          fontFamily: 'Magra',
+          fontWeight: FontWeight.w600,
+        ),
       );
 }
 
@@ -155,7 +163,22 @@ class ColorSchemes {
 
     // Error colors
     errorContainer: Color(0X3F000000),
-    onError: Color(0XFF979797),
+    onError: Color(0XFFB5B03E),
+
+    // On colors(text colors)
+    onPrimary: Color(0XFF2300FD),
+    onPrimaryContainer: Color(0XFFD9D9D9),
+  );
+
+  static final secondaryColorScheme = ColorScheme.light(
+    // Primary colors
+    primary: Color(0XFF1BC440),
+    primaryContainer: Color(0XFF6000FF),
+    secondaryContainer: Color(0XFFD71A1A),
+
+    // Error colors
+    errorContainer: Color(0X3F000000),
+    onError: Color.fromARGB(255, 182, 167, 167),
 
     // On colors(text colors)
     onPrimary: Color(0XFF2300FD),
@@ -165,6 +188,42 @@ class ColorSchemes {
 
 /// Class containing custom colors for a primary theme.
 class PrimaryColors {
+  // Amber
+  Color get amber600 => Color(0XFFFFB700);
+
+  // Black
+  Color get black900 => Color(0XFF000000);
+
+  // DeepPurple
+  Color get deepPurpleA700 => Color(0XFF2300FD);
+
+  // Gray
+  Color get gray200 => Color(0XFFF0F0F0);
+  Color get gray500 => Color(0XFF979797);
+  Color get gray900 => Color(0XFF282424);
+
+  // GrayEf
+  Color get gray50Ef => Color(0XEFF9F9F9);
+
+  // Green
+  Color get greenA700 => Color(0XFF1BC440);
+
+  // LightBlue
+  Color get lightBlue900 => Color(0XFF02458D);
+  Color get lightBlueA700 => Color(0XFF007AFF);
+
+  // LightGreen
+  Color get lightGreenA700 => Color(0XFF58E435);
+
+  // Red
+  Color get redA700 => Color(0XFFFF0000);
+
+  // White
+  Color get whiteA700 => Color(0XFFFFFFFF);
+}
+
+/// Class containing custom colors for a secondary theme.
+class SecondaryColors extends PrimaryColors {
   // Amber
   Color get amber600 => Color(0XFFFFB700);
 

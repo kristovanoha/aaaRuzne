@@ -145,4 +145,7 @@ extension TextFormFieldStyleHelper on CustomTextFormField {
         borderRadius: BorderRadius.circular(10.h),
         borderSide: BorderSide.none,
       );
+  static OutlineInputBorder get fillOnPrimaryContainer => OutlineInputBorder(
+        borderSide: BorderSide.none,
+      );
 }

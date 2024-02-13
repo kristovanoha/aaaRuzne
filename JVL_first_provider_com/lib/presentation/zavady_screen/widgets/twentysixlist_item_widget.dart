@@ -27,7 +27,7 @@ class TwentysixlistItemWidget extends StatelessWidget {
           horizontal: 18.h,
           vertical: 5.v,
         ),
-        decoration: AppDecoration.outlineOnError1.copyWith(
+        decoration: AppDecoration.outlineGray500.copyWith(
           borderRadius: BorderRadiusStyle.roundedBorder10,
         ),
         child: Column(
@@ -43,12 +43,12 @@ class TwentysixlistItemWidget extends StatelessWidget {
                     padding: EdgeInsets.only(top: 1.v),
                     child: Text(
                       twentysixlistItemModelObj.dateText!,
-                      style: CustomTextStyles.bodySmallOnError,
+                      style: CustomTextStyles.bodySmallGray500,
                     ),
                   ),
                   Text(
                     twentysixlistItemModelObj.resolvedText!,
-                    style: CustomTextStyles.bodySmallOnError,
+                    style: CustomTextStyles.bodySmallGray500,
                   ),
                 ],
               ),
@@ -56,7 +56,7 @@ class TwentysixlistItemWidget extends StatelessWidget {
             SizedBox(height: 6.v),
             Text(
               twentysixlistItemModelObj.windowSealText!,
-              style: CustomTextStyles.bodySmallOnError,
+              style: CustomTextStyles.bodySmallGray500,
             ),
             SizedBox(height: 7.v),
           ],

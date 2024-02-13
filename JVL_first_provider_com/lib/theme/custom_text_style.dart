@@ -69,6 +69,10 @@ class CustomTextStyles {
   static get displayMediumWhiteA700 => theme.textTheme.displayMedium!.copyWith(
         color: appTheme.whiteA700,
       );
+  static get displaySmallErrorContainer =>
+      theme.textTheme.displaySmall!.copyWith(
+        color: theme.colorScheme.errorContainer.withOpacity(1),
+      );
   static get displaySmallLexendExaRedA700 =>
       theme.textTheme.displaySmall!.lexendExa.copyWith(
         color: appTheme.redA700,

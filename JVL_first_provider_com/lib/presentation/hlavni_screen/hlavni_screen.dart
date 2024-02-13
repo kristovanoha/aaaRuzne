@@ -37,7 +37,7 @@ class HlavniScreenState extends State<HlavniScreen> {
                 width: SizeUtils.width,
                 child: SingleChildScrollView(
                     padding: EdgeInsets.only(top: 19.v),
-                    child: _buildMainSection(context)))));
+                    child: _buildMainColumn(context)))));
   }
 
   /// Section Widget
@@ -66,7 +66,7 @@ class HlavniScreenState extends State<HlavniScreen> {
   }
 
   /// Section Widget
-  Widget _buildMainSection(BuildContext context) {
+  Widget _buildMainColumn(BuildContext context) {
     return Container(
         margin: EdgeInsets.only(bottom: 5.v),
         padding: EdgeInsets.symmetric(horizontal: 14.h),
@@ -168,14 +168,20 @@ class HlavniScreenState extends State<HlavniScreen> {
                       width: 224.h,
                       margin: EdgeInsets.only(left: 48.h, right: 90.h),
                       padding: EdgeInsets.symmetric(
-                          horizontal: 56.h, vertical: 34.v),
+                          horizontal: 40.h, vertical: 30.v),
                       decoration: AppDecoration.fillOnPrimaryContainer,
                       child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            SizedBox(height: 14.v),
-                            Text("lbl_test".tr,
-                                style: CustomTextStyles.bodySmallErrorContainer)
+                            SizedBox(height: 3.v),
+                            Padding(
+                                padding: EdgeInsets.only(left: 16.h),
+                                child: Text("lbl_test".tr,
+                                    style: CustomTextStyles
+                                        .bodySmallErrorContainer)),
+                            Text("lbl_do_testu".tr,
+                                style: theme.textTheme.titleSmall)
                           ]))))
         ]));
   }

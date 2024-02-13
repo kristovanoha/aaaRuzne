@@ -19,6 +19,20 @@ class AppDecoration {
         ),
       );
   static BoxDecoration get outlineErrorContainer => BoxDecoration();
+  static BoxDecoration get outlineGray => BoxDecoration(
+        color: appTheme.gray50Ef,
+        border: Border.all(
+          color: appTheme.gray500,
+          width: 1.h,
+        ),
+      );
+  static BoxDecoration get outlineGray500 => BoxDecoration(
+        color: appTheme.whiteA700,
+        border: Border.all(
+          color: appTheme.gray500,
+          width: 1.h,
+        ),
+      );
   static BoxDecoration get outlineLightBlue => BoxDecoration(
         color: appTheme.whiteA700,
         border: Border.all(
@@ -43,20 +57,6 @@ class AppDecoration {
         color: appTheme.lightBlue900,
         border: Border.all(
           color: appTheme.lightBlue900,
-          width: 1.h,
-        ),
-      );
-  static BoxDecoration get outlineOnError => BoxDecoration(
-        color: appTheme.gray50Ef,
-        border: Border.all(
-          color: theme.colorScheme.onError,
-          width: 1.h,
-        ),
-      );
-  static BoxDecoration get outlineOnError1 => BoxDecoration(
-        color: appTheme.whiteA700,
-        border: Border.all(
-          color: theme.colorScheme.onError,
           width: 1.h,
         ),
       );

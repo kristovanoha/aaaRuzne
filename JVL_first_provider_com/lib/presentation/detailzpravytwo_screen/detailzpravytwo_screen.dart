@@ -245,13 +245,13 @@ class DetailzpravytwoScreenState extends State<DetailzpravytwoScreen> {
         child:
             Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
           _buildCancelStack(context,
-              cancelText: "lbl_odeslat".tr,
-              closeText: "lbl".tr, onTapCancelStack: () {
+              cancelButton: "lbl_odeslat".tr,
+              closeButton: "lbl".tr, onTapCancelStack: () {
             onTapCancelStack(context);
           }),
           _buildCancelStack(context,
-              cancelText: "lbl_zru_it".tr,
-              closeText: "lbl_x2".tr, onTapCancelStack: () {
+              cancelButton: "lbl_zru_it".tr,
+              closeButton: "lbl_x2".tr, onTapCancelStack: () {
             onTapCancelStack1(context);
           })
         ]));
@@ -260,8 +260,8 @@ class DetailzpravytwoScreenState extends State<DetailzpravytwoScreen> {
   /// Common widget
   Widget _buildCancelStack(
     BuildContext context, {
-    required String cancelText,
-    required String closeText,
+    required String cancelButton,
+    required String closeButton,
     Function? onTapCancelStack,
   }) {
     return GestureDetector(
@@ -287,14 +287,14 @@ class DetailzpravytwoScreenState extends State<DetailzpravytwoScreen> {
                               horizontal: 50.h, vertical: 19.v),
                           decoration: AppDecoration.outlineLightBlue.copyWith(
                               borderRadius: BorderRadiusStyle.roundedBorder10),
-                          child: Text(cancelText,
+                          child: Text(cancelButton,
                               style: theme.textTheme.bodySmall!
                                   .copyWith(color: appTheme.lightBlue900)))),
                   Align(
                       alignment: Alignment.centerLeft,
                       child: Padding(
                           padding: EdgeInsets.only(left: 32.h),
-                          child: Text(closeText,
+                          child: Text(closeButton,
                               style: theme.textTheme.displayMedium!.copyWith(
                                   color: theme.colorScheme.errorContainer
                                       .withOpacity(1)))))
