@@ -23,11 +23,11 @@ class LoginScreenState extends State<LoginScreen> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(const Duration(milliseconds: 3000), () {
-      NavigatorService.popAndPushNamed(
-        AppRoutes.hlavniScreen,
-      );
-    });
+    // Future.delayed(const Duration(milliseconds: 3000), () {
+    //   NavigatorService.popAndPushNamed(
+    //     AppRoutes.hlavniScreen,
+    //   );
+    // });
   }
 
   @override
