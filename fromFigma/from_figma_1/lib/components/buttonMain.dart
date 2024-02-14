@@ -13,6 +13,7 @@ class MainButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
+      
       style: style ?? FigmaButtonStyle.styleDefault, // použijeme výchozí nebo předaný styl
       onPressed: onPressed,
       onHover: (value)  { print("HOVER");},

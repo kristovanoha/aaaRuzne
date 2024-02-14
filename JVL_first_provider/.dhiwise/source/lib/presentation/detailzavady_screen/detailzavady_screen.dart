@@ -25,7 +25,7 @@ class DetailzavadyScreen extends StatefulWidget {
         child: DetailzavadyScreen());
   }
 }
-
+//55
 class DetailzavadyScreenState extends State<DetailzavadyScreen> {
   @override
   void initState() {

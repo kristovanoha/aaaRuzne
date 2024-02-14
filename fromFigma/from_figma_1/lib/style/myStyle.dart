@@ -3,8 +3,12 @@ import 'package:flutter/material.dart';
 class ColorMain{
    static const Color buttonDefault = Color(0xFF5AC8FA);
    static const Color buttonHover = Color(0xFF474512);
-   static const Color buttonClick = Color(0xFF72B53E);
+   static const Color buttonClick = Color(0xFF70F805);
    static const Color buttonDisable = Color(0xFFB5453E);
+}
+
+class ColorMainFont{   
+   static const Color buttonClick = Color(0xFFEFFF3B);
 }
 
 class RoundCorner{
@@ -79,9 +83,9 @@ class FigmaButtonStyle {
   static final ButtonStyle styleDefault = ElevatedButton.styleFrom(
     foregroundColor: Colors.black, // Barva pozadí tlačítka
     backgroundColor: ColorMain.buttonDefault,// textu tlačítka
-    textStyle: TextStyle(
+    textStyle: const TextStyle(
       fontSize: 20,
-      fontFamily: 'Lobster Two',
+      fontFamily: 'LobsterTwo',
       fontWeight: FontWeight.w400,
     ),
     padding: EdgeInsets.symmetric(vertical: 16, horizontal: 24), // Odsazení tlačítka
@@ -91,12 +95,13 @@ class FigmaButtonStyle {
   );
 
    static final ButtonStyle styleClick = ElevatedButton.styleFrom(
-    foregroundColor: Colors.black, // Barva pozadí tlačítka
+    foregroundColor: ColorMainFont.buttonClick, // Barva pozadí tlačítka
     backgroundColor: ColorMain.buttonClick,// textu tlačítka
-    textStyle: TextStyle(
+    textStyle: const TextStyle(
       fontSize: 10,
-      fontFamily: 'Lobster Two',
+      fontFamily: 'LobsterTwo',
       fontWeight: FontWeight.w400,
+      color: ColorMainFont.buttonClick
     ),
     padding: EdgeInsets.symmetric(vertical: 16, horizontal: 24), // Odsazení tlačítka
     shape: RoundedRectangleBorder( // Tvar tlačítka
@@ -107,14 +112,29 @@ class FigmaButtonStyle {
    static final ButtonStyle styleDisabled = ElevatedButton.styleFrom(
     foregroundColor: Colors.black, // Barva pozadí tlačítka
     backgroundColor: ColorMain.buttonDisable,// textu tlačítka
-
+     
+       shape: const RoundedRectangleBorder( // Tvar tlačítka
+    borderRadius: BorderRadius.zero, // Zakázání zaoblení rohů
+  ),
 
   
-    textStyle: TextStyle(
+    textStyle: const TextStyle(
       color: Colors.black,
-                  // fontSize: FontSize.big,
-                  fontFamily:  'Lobster',
-                  // fontWeight: FontWeight.w400,
+                  fontFamily:  'LobsterTwo',
                   height: 0)
   );
+}
+
+
+class FigmaFontStyle{
+   static final defaultFont = TextStyle(
+      color: Colors.black,
+                  fontFamily:  'LobsterTwo',
+                  height: 0);
+
+    static final clickFont = TextStyle(
+      color: ColorMainFont.buttonClick,
+                  fontFamily:  'LobsterTwo',
+                  height: 0);
+
 }

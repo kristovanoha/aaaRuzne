@@ -5,6 +5,7 @@ import '../style/myStyle.dart';
 class FigmaButton extends StatefulWidget {
   final String text;
   final VoidCallback onPressed;
+ 
 
   FigmaButton({required this.text, required this.onPressed});
 
@@ -34,12 +35,13 @@ class _MyButtonState extends State<FigmaButton> {
           padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
           decoration: BoxDecoration(
             color: isPressed
-                ? Color.fromARGB(206, 193, 2, 2)
+                ? ColorMain.buttonClick
                 : (isHovered ? Colors.grey : ColorMain.buttonDefault),
             borderRadius: BorderRadius.circular(8),
           ),
           child: Text(
             widget.text,
+            style: isPressed ? FigmaFontStyle.clickFont: FigmaFontStyle.defaultFont
            // style: FigmaButtonStyle.styleDefault,
           ),
         ),
