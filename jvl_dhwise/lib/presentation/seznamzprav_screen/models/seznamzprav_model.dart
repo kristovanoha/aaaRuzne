@@ -1,33 +1,33 @@
 import '../../../core/app_export.dart';
-import 'messagelist_item_model.dart';
-import 'userprofilelist_item_model.dart';
+import 'messageform_item_model.dart';
+import 'viewhierarchy_item_model.dart';
 
 class SeznamzpravModel {
-  List<MessagelistItemModel> messagelistItemList = [
-    MessagelistItemModel(
+  List<MessageformItemModel> messageformItemList = [
+    MessageformItemModel(
         admissionDate: "datum přijetí",
         subject: "předmět",
         sender: "odesílatel",
         messageBody: "tělo zprávy"),
-    MessagelistItemModel(
+    MessageformItemModel(
         admissionDate: "24.1.2024",
         subject: "Fidorky nejsou",
         sender: "dispečink",
         messageBody: "Nedostatek Fidorek nahraďte dostatke..."),
-    MessagelistItemModel(
+    MessageformItemModel(
         admissionDate: "24.1.2024",
         subject: "Svíčková",
         sender: "dispečink",
         messageBody: "Svíčková je super, ale je jí málo."),
-    MessagelistItemModel(messageBody: "tech. disp.")
+    MessageformItemModel(messageBody: "tech. disp.")
   ];
 
-  List<UserprofilelistItemModel> userprofilelistItemList = [
-    UserprofilelistItemModel(
+  List<ViewhierarchyItemModel> viewhierarchyItemList = [
+    ViewhierarchyItemModel(
         dateText: "24.1.2024",
-        descriptionText: "V řešení",
-        errorText: "Závada číslo 12345 je v řešení.",
-        techDispText: "tech. disp."),
-    UserprofilelistItemModel(techDispText: "Svíčková je super, ale je jí málo.")
+        titleText: "V řešení",
+        descriptionText: "Závada číslo 12345 je v řešení.",
+        labelText: "tech. disp."),
+    ViewhierarchyItemModel(labelText: "Svíčková je super, ale je jí málo.")
   ];
 }

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:jlv_first/core/app_export.dart';
 import 'package:jlv_first/presentation/seznamzprav_screen/models/seznamzprav_model.dart';
-import '../models/messagelist_item_model.dart';
-import '../models/userprofilelist_item_model.dart';
+import '../models/messageform_item_model.dart';
+import '../models/viewhierarchy_item_model.dart';
 
 /// A provider class for the SeznamzpravScreen.
 ///
