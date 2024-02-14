@@ -10,6 +10,9 @@ class CustomButtonStyles {
           borderRadius: BorderRadius.circular(10.h),
         ),
       );
+  static ButtonStyle get fillOnPrimaryContainer => ElevatedButton.styleFrom(
+        backgroundColor: theme.colorScheme.onPrimaryContainer,
+      );
   static ButtonStyle get fillPrimaryTL13 => ElevatedButton.styleFrom(
         backgroundColor: theme.colorScheme.primary,
         shape: RoundedRectangleBorder(

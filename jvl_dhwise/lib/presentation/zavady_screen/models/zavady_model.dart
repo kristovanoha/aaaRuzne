@@ -1,6 +1,6 @@
 import '../../../core/app_export.dart';
 import 'viewhierarchylist_item_model.dart';
-import 'viewhierarchylist1_item_model.dart';
+import 'twentysixlist_item_model.dart';
 
 class ZavadyModel {
   List<ViewhierarchylistItemModel> viewhierarchylistItemList = [
@@ -16,12 +16,11 @@ class ZavadyModel {
         popisZavady: "Profukující těsnění u okna v kuchyni")
   ];
 
-  List<Viewhierarchylist1ItemModel> viewhierarchylist1ItemList = [
-    Viewhierarchylist1ItemModel(
+  List<TwentysixlistItemModel> twentysixlistItemList = [
+    TwentysixlistItemModel(
         dateText: "1.1.2024",
-        statusText: "vyřešeno",
-        descriptionText: "Profukující těsnění u okna v kuchyni"),
-    Viewhierarchylist1ItemModel(
-        statusText: "Profukující těsnění u okna v kuchyni")
+        resolvedText: "vyřešeno",
+        windowSealText: "Profukující těsnění u okna v kuchyni"),
+    TwentysixlistItemModel(resolvedText: "Profukující těsnění u okna v kuchyni")
   ];
 }

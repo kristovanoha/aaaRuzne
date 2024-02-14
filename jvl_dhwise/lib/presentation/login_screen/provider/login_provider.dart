@@ -9,16 +9,16 @@ import 'package:jlv_first/presentation/login_screen/models/login_model.dart';
 
 // ignore_for_file: must_be_immutable
 class LoginProvider extends ChangeNotifier {
-  TextEditingController loginEditTextController = TextEditingController();
+  TextEditingController oscisloEditTextController = TextEditingController();
 
-  TextEditingController loginEditTextController1 = TextEditingController();
+  TextEditingController heslovalueEditTextController = TextEditingController();
 
   LoginModel loginModelObj = LoginModel();
 
   @override
   void dispose() {
     super.dispose();
-    loginEditTextController.dispose();
-    loginEditTextController1.dispose();
+    oscisloEditTextController.dispose();
+    heslovalueEditTextController.dispose();
   }
 }

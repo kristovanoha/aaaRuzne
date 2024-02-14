@@ -1,10 +1,12 @@
 final Map<String, String> enUs = {
   // login Screen
+  "lbl_hero": "HERO",
   "lbl_heslo": "heslo",
   "lbl_hexx": "HExx",
   "lbl_hexx2": "Hexx",
   "lbl_os_slo": "os. číslo",
   "lbl_p_ihl_sit_se": "Přihlásit se",
+  "lbl_test3": "TEST",
   "msg_isdisp_tech_ver": "ISDISP:tech ver 1.0.0\nTrustlab 2024",
   "msg_podpora_support_jlv_cz_420":
       "Podpora:\nsupport@jlv.cz\n+420 777 111 222",

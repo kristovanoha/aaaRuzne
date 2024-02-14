@@ -1,6 +1,6 @@
-import '../zavady_screen/widgets/viewhierarchylist1_item_widget.dart';
+import '../zavady_screen/widgets/twentysixlist_item_widget.dart';
 import '../zavady_screen/widgets/viewhierarchylist_item_widget.dart';
-import 'models/viewhierarchylist1_item_model.dart';
+import 'models/twentysixlist_item_model.dart';
 import 'models/viewhierarchylist_item_model.dart';
 import 'models/zavady_model.dart';
 import 'package:flutter/material.dart';
@@ -53,7 +53,7 @@ class ZavadyScreenState extends State<ZavadyScreen> {
                                 child: Text("lbl_archiv_z_vad".tr,
                                     style: theme.textTheme.labelLarge)),
                             SizedBox(height: 10.v),
-                            _buildViewHierarchyList1(context)
+                            _buildTwentySixList(context)
                           ])),
                   SizedBox(height: 5.v)
                 ]))));
@@ -162,7 +162,7 @@ class ZavadyScreenState extends State<ZavadyScreen> {
   }
 
   /// Section Widget
-  Widget _buildViewHierarchyList1(BuildContext context) {
+  Widget _buildTwentySixList(BuildContext context) {
     return Consumer<ZavadyProvider>(builder: (context, provider, child) {
       return ListView.separated(
           physics: NeverScrollableScrollPhysics(),
@@ -170,12 +170,12 @@ class ZavadyScreenState extends State<ZavadyScreen> {
           separatorBuilder: (context, index) {
             return SizedBox(height: 24.v);
           },
-          itemCount: provider.zavadyModelObj.viewhierarchylist1ItemList.length,
+          itemCount: provider.zavadyModelObj.twentysixlistItemList.length,
           itemBuilder: (context, index) {
-            Viewhierarchylist1ItemModel model =
-                provider.zavadyModelObj.viewhierarchylist1ItemList[index];
-            return Viewhierarchylist1ItemWidget(model, onTapViewHierarchy: () {
-              onTapViewHierarchy(context);
+            TwentysixlistItemModel model =
+                provider.zavadyModelObj.twentysixlistItemList[index];
+            return TwentysixlistItemWidget(model, onTapTwentySix: () {
+              onTapTwentySix(context);
             });
           });
     });
@@ -183,6 +183,11 @@ class ZavadyScreenState extends State<ZavadyScreen> {
 
   /// Navigates to the detailzavadyScreen when the action is triggered.
   onTapViewHierarchy(BuildContext context) {
+    NavigatorService.pushNamed(AppRoutes.detailzavadyScreen);
+  }
+
+  /// Navigates to the detailzavadyScreen when the action is triggered.
+  onTapTwentySix(BuildContext context) {
     NavigatorService.pushNamed(AppRoutes.detailzavadyScreen);
   }
 
